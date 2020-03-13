@@ -13,9 +13,36 @@ namespace smartcart_1
 {
     public partial class ProductOrder : Form
     {
+        //콤보박스
+        public void FillComboName()
+        {
+            string constring = "datasource = http://oaoopw.dothome.co.kr; port=21; username=oaoopw; password=kara1136!; database=oaoopw;";
+            string Query = "select name from product";
+            MySqlConnection conDataBase = new MySqlConnection(constring);
+            MySqlCommand cmdDatabase = new MySqlCommand(Query, conDataBase);
+            MySqlDataReader myReader;
+
+            try
+            {
+                conDataBase.Open();
+                myReader = cmdDatabase.ExecuteReader();
+                while(myReader.Read())
+                {
+                    string sName = myReader.GetString("name");
+                    cbBoxPdName.Items.Add(sName);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        
+
         public ProductOrder()
         {
             InitializeComponent();
+            FillComboName();
         }
 
         private void ProductOrder_Load(object sender, EventArgs e)
@@ -26,6 +53,27 @@ namespace smartcart_1
         private void btnOrder_Click(object sender, EventArgs e)
         {
             MessageBox.Show("주문되었습니다.", "관리자");
+            var a = cbBoxPdName.SelectedItem;
+
+            //string constring = "datasource = localhost;username=root;password=apmsetup;database=smartcart;";
+            ////string Query = "INSERT INTO product (`name`, `price`, `quantity`) VALUES ({0}, '7000', '20')"(cbBoxPdName);
+            //MySqlConnection conDataBase = new MySqlConnection(constring);
+            ////MySqlCommand cmdDatabase = new MySqlCommand(Query, conDataBase);
+            //MySqlDataReader myReader;
+            //try
+            //{
+            //    conDataBase.Open();
+            //    myReader = cmdDatabase.ExecuteReader();
+            //    while (myReader.Read())
+            //    {
+            //        string sName = myReader.GetString("name");
+            //        cbBoxPdName.Items.Add(sName);
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
             //Dispose(true);
         }
 
@@ -35,55 +83,15 @@ namespace smartcart_1
             //Dispose(true);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void cbBoxPdName_SelectedIndexChanged(object sender, EventArgs e)
         {
-            runQuery();
-        }
-        private void runQuery()
-        {
-            string query = textBox1.Text;
-
-            if(query == "")
-            {
-                MessageBox.Show("Please insert some sql query !");
-                return;
-            }
-
-            string MySQLConnectionString = "server=http://oaoopw.dathome.co.kr; uid=oaoopw; password=kara1136!; database=oaoopw;";
-            //string MySQLConnectionString = "server=localhost;uid=root;password=apmsetup;database=smartcart;";
-
-            MySqlConnection databaseConnection = new MySqlConnection(MySQLConnectionString);
-
-            MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
-            commandDatabase.CommandTimeout = 60;
-
-            try
-            {
-                databaseConnection.Open();
-
-                MySqlDataReader myReader = commandDatabase.ExecuteReader();
-
-                if(myReader.HasRows)
-                {
-                    MessageBox.Show("Your query generated results, please see the console");
-
-                    while (myReader.Read())
-                    {
-                                          //ID                            first_name                   last_name                         address
-                        Console.WriteLine(myReader.GetString(0) + " - " + myReader.GetString(1) + " - " + myReader.GetString(2) + " - " + myReader.GetString(3));
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Query successfully executed");
-                }
-            }
-            catch(Exception e)
-            {
-                MessageBox.Show("Query error: " + e.Message);
-            }
+                  
         }
 
+        private void cbBoxPdName_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            
+        }
     }
     
 }

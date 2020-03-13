@@ -7,22 +7,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient; 
+using MySql.Data.MySqlClient;
 
 
 namespace smartcart_1
 {
+
     public partial class Main : Form
     {
+        
+        Con_database db;
+
         Login loginForm;
 
         public Main()
         {
             InitializeComponent();
+            db = new Con_database();
+            db.ConnectDB();
+            
         }
-
+        //처음 시작할때 띄우는 폼 로드
         private void Form1_Load(object sender, EventArgs e)
         {
+            dataGridView1.Visible = true;
             //첫 화면 배경색 지정
             btnLogout.BackColor = Color.FromArgb(64, 64, 64);
             label1.BackColor = Color.FromArgb(64, 64, 64);
@@ -48,29 +56,19 @@ namespace smartcart_1
                     Dispose();
                     break;
             }
-            //첫 화면 datagridview에 카트 테이블 생성
-            DataTable cartTbl = new DataTable();
+            //데이터그리드뷰에 테이블 생성 (카트 실시간 현황)
+            string sql = "SELECT * FROM cart";
+            DataTable dt = db.GetDBTable(sql);
+            dataGridView1.DataSource = dt;
 
-            // column을 추가합니다.
-            cartTbl.Columns.Add("카트번호", typeof(int));
-            cartTbl.Columns.Add("카트고유ID", typeof(string));
-            cartTbl.Columns.Add("사용자 사용 현황", typeof(string));
-
-            // 각각의 행에 내용을 입력합니다.
-            cartTbl.Rows.Add("1", "1234", null);
-            cartTbl.Rows.Add("2", "5678", null);
-            cartTbl.Rows.Add("3", "9012", "박대원");
-
-            // 값들이 입력된 테이블을 DataGridView에 입력합니다.
-            dataGridView1.DataSource = cartTbl;
-
+            //버튼 배경색 지정
             btnCart.BackColor = Color.FromArgb(255, 192, 192);
-            btnProduct.BackColor = Color.FromArgb(51,153,255); 
-            btnMember.BackColor = Color.FromArgb(51, 153, 255); 
-            btnIbob.BackColor = Color.FromArgb(51, 153, 255); 
-            btnSales.BackColor = Color.FromArgb(51, 153, 255); 
+            btnProduct.BackColor = Color.FromArgb(51, 153, 255);
+            btnMember.BackColor = Color.FromArgb(51, 153, 255);
+            btnIbob.BackColor = Color.FromArgb(51, 153, 255);
+            btnSales.BackColor = Color.FromArgb(51, 153, 255);
 
-            //매출 그래프 series 값
+            //총매출 그래프 series 값
             Random rand = new Random();
             for (int i = 0; i < 12; i++)
             {
@@ -82,10 +80,8 @@ namespace smartcart_1
                 chartSales.Series[3].Points.AddXY(cnt + "월", rand.Next(100, 500));
                 chartSales.Series[4].Points.AddXY(cnt + "월", rand.Next(200, 500));
 
-                chartSales2.Series[0].Points.AddXY(cnt + "월", rand.Next(1000, 5000));
-
-                
-            }
+                chartSales2.Series[0].Points.AddXY(cnt + "월", rand.Next(300, 500));
+            }        
         }
 
         //로그인 생성 시 메시지박스 띄우기
@@ -94,23 +90,14 @@ namespace smartcart_1
             MessageBox.Show(userName + "님이 로그인하셨습니다.");
             LblLogname.Text = userName + "님";
         }
-
+        //카트 실시간 현황 버튼
         private void btnCart_Click(object sender, EventArgs e)
         {
-            DataTable cartTbl = new DataTable();
+            dataGridView1.Visible = true;
 
-            // column을 추가합니다.
-            cartTbl.Columns.Add("카트번호", typeof(int));
-            cartTbl.Columns.Add("카트고유ID", typeof(string));
-            cartTbl.Columns.Add("사용자 사용 현황", typeof(string));
-
-            // 각각의 행에 내용을 입력합니다.
-            cartTbl.Rows.Add("1", "1234", null);
-            cartTbl.Rows.Add("2", "5678", null);
-            cartTbl.Rows.Add("3", "9012", "박대원");
-
-            // 값들이 입력된 테이블을 DataGridView에 입력합니다.
-            dataGridView1.DataSource = cartTbl;
+            string sql = "SELECT * FROM cart";
+            DataTable dt = db.GetDBTable(sql);
+            dataGridView1.DataSource = dt;
 
             chartSales.Visible = false;
             chartSales2.Visible = false;
@@ -132,27 +119,14 @@ namespace smartcart_1
             btnPdChart.Visible = false;
             btnSalesChart.Visible = false;
         }
-
+        //회원 관리 버튼
         private void btnMember_Click(object sender, EventArgs e)
         {
-            DataTable memberTbl = new DataTable();
+            dataGridView1.Visible = true;
 
-            // column을 추가합니다.
-            memberTbl.Columns.Add("회원번호", typeof(int));
-            memberTbl.Columns.Add("회원이름", typeof(string));
-            memberTbl.Columns.Add("성별", typeof(string));
-            memberTbl.Columns.Add("나이", typeof(int));
-            memberTbl.Columns.Add("폰번호", typeof(string));
-
-            // 각각의 행에 내용을 입력합니다.
-            memberTbl.Rows.Add("1", "송찬호", "남", "26", "010-4526-5594");
-            memberTbl.Rows.Add("2", "한수정", "여", "25", "010-4223-1345");
-            memberTbl.Rows.Add("3", "박대원", "남", "26", "010-4113-5223");
-            memberTbl.Rows.Add("4", "장혁진", "남", "26", "010-4444-5213");
-            memberTbl.Rows.Add("5", "어동규", "남", "27", "010-4133-1234");
-
-            // 값들이 입력된 테이블을 DataGridView에 입력합니다.
-            dataGridView1.DataSource = memberTbl;
+            string sql = "SELECT * FROM user";
+            DataTable dt = db.GetDBTable(sql);
+            dataGridView1.DataSource = dt;
 
             chartSales.Visible = false;
             chartSales2.Visible = false;
@@ -175,24 +149,14 @@ namespace smartcart_1
             btnSalesChart.Visible = false;
         }
 
+        //상품 관리 버튼
         private void btnProduct_Click(object sender, EventArgs e)
         {
-            DataTable productTbl = new DataTable();
+            dataGridView1.Visible = true;
 
-            // column을 추가합니다.
-            productTbl.Columns.Add("상품번호", typeof(int));
-            productTbl.Columns.Add("상품 명", typeof(string));
-            productTbl.Columns.Add("가격", typeof(int));
-            productTbl.Columns.Add("수량", typeof(int));
-
-            // 각각의 행에 내용을 입력합니다.
-            productTbl.Rows.Add("1", "레몬", "3000", "30");
-            productTbl.Rows.Add("2", "수박", "5500", "25");
-            productTbl.Rows.Add("3", "딸기", "7000", "6");
-            productTbl.Rows.Add("4", "바나나", "3500", "9");
-
-            // 값들이 입력된 테이블을 DataGridView에 입력합니다.
-            dataGridView1.DataSource = productTbl;
+            string sql = "SELECT * FROM product";
+            DataTable dt = db.GetDBTable(sql);
+            dataGridView1.DataSource = dt;
 
             chartSales.Visible = false;
             chartSales2.Visible = false;
@@ -215,8 +179,11 @@ namespace smartcart_1
             btnSalesChart.Visible = false;
         }
 
+        //입출고 버튼 클릭 시
         private void btnInoutgo_Click(object sender, EventArgs e)
         {
+            dataGridView1.Visible = true;
+
             DataTable inoutgoTbl = new DataTable();
 
             Random rand2 = new Random();
@@ -296,20 +263,19 @@ namespace smartcart_1
             btnPdDel.Visible = false;
             btnPdChart.Visible = false;
             btnSalesChart.Visible = false;
-
-
-
         }
-
+        //매출 그래프 버튼 
         private void btnSales_Click(object sender, EventArgs e)
         {
+            dataGridView1.Visible = false;
+
             chartSales2.Visible = true;
 
             btnSales.BackColor = Color.FromArgb(255, 192, 192);
             btnProduct.BackColor = Color.FromArgb(51, 153, 255);
-            btnMember.BackColor = Color.FromArgb(51, 153, 255); ;
-            btnCart.BackColor = Color.FromArgb(51, 153, 255); ;
-            btnIbob.BackColor = Color.FromArgb(51, 153, 255); ;
+            btnMember.BackColor = Color.FromArgb(51, 153, 255); 
+            btnCart.BackColor = Color.FromArgb(51, 153, 255); 
+            btnIbob.BackColor = Color.FromArgb(51, 153, 255); 
 
             btnInbound.Visible = false;
             btnOutbound.Visible = false;
@@ -322,7 +288,7 @@ namespace smartcart_1
             btnPdChart.Visible = true;
             btnSalesChart.Visible = true;
         }
-
+        
         private void chartSales_Click(object sender, EventArgs e)
         {
 
@@ -332,6 +298,7 @@ namespace smartcart_1
         {
         }
 
+        //입고 내역 버튼
         private void btnInbound_Click(object sender, EventArgs e)
         {
             DataTable ingoTbl = new DataTable();
@@ -398,6 +365,7 @@ namespace smartcart_1
 
             }
 
+        //출고 내역 버튼
         private void btnOutbound_Click(object sender, EventArgs e)
         {
             DataTable outgoTbl = new DataTable();
@@ -464,18 +432,21 @@ namespace smartcart_1
             dataGridView1.DataSource = outgoTbl;
         }
 
+        //총매출액 그래프 버튼
         private void btnSalesChart_Click(object sender, EventArgs e)
         {
             chartSales.Visible = false;
             chartSales2.Visible = true;
         }
 
+        //상품별 판매 그래프 버튼
         private void btnPdChart_Click(object sender, EventArgs e)
         {
             chartSales.Visible = true;
             chartSales2.Visible = false;
         }
 
+        //로그아웃 버튼
         private void btnLogout_Click(object sender, EventArgs e)
         {
             loginForm = new Login();
@@ -490,11 +461,12 @@ namespace smartcart_1
                     break;
             }
         }
-
+               
         private void LblLogname_Click(object sender, EventArgs e)
         {
         }
 
+        //상품주문 버튼
         private void btnPdOrder_Click(object sender, EventArgs e)
         {
 
@@ -503,6 +475,7 @@ namespace smartcart_1
             f.Show();
         }
 
+        //상품수정 버튼
         private void btnPdMdfy_Click(object sender, EventArgs e)
         {
             ProductModify f = new ProductModify();
@@ -510,16 +483,19 @@ namespace smartcart_1
             f.Show();
         }
 
+        //상품삭제 버튼
         private void btnPdDel_Click(object sender, EventArgs e)
         {
             ProductDelete f = new ProductDelete();
             DialogResult = DialogResult.OK;
             f.Show();
         }
-
+        
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
+
+
     }
 }

@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Con_database.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +67,12 @@
     </Compile>
     <Compile Include="LoginChecker.Designer.cs">
       <DependentUpon>LoginChecker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberModify.Designer.cs">
+      <DependentUpon>MemberModify.cs</DependentUpon>
     </Compile>
     <Compile Include="ProductDelete.cs">
       <SubType>Form</SubType>
@@ -95,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginChecker.resx">
       <DependentUpon>LoginChecker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberModify.resx">
+      <DependentUpon>MemberModify.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductDelete.resx">
       <DependentUpon>ProductDelete.cs</DependentUpon>

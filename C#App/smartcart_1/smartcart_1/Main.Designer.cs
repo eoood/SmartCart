@@ -329,9 +329,9 @@
             this.btnPdChart.ForeColor = System.Drawing.SystemColors.Window;
             this.btnPdChart.Location = new System.Drawing.Point(258, 755);
             this.btnPdChart.Name = "btnPdChart";
-            this.btnPdChart.Size = new System.Drawing.Size(228, 43);
+            this.btnPdChart.Size = new System.Drawing.Size(258, 43);
             this.btnPdChart.TabIndex = 3;
-            this.btnPdChart.Text = "상품별 판매 현황";
+            this.btnPdChart.Text = "상품별 판매 그래프";
             this.btnPdChart.UseVisualStyleBackColor = false;
             this.btnPdChart.Visible = false;
             this.btnPdChart.Click += new System.EventHandler(this.btnPdChart_Click);
@@ -348,7 +348,7 @@
             this.btnSalesChart.Name = "btnSalesChart";
             this.btnSalesChart.Size = new System.Drawing.Size(228, 43);
             this.btnSalesChart.TabIndex = 3;
-            this.btnSalesChart.Text = "총매출 현황";
+            this.btnSalesChart.Text = "총매출 그래프";
             this.btnSalesChart.UseVisualStyleBackColor = false;
             this.btnSalesChart.Visible = false;
             this.btnSalesChart.Click += new System.EventHandler(this.btnSalesChart_Click);
@@ -448,6 +448,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1174, 810);
             this.Controls.Add(this.LblLogname);

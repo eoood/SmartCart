@@ -19,3 +19,4 @@ C:\Users\SONG\source\repos\smartcart_1\smartcart_1\bin\Debug\MySql.Data.xml
 C:\Users\SONG\source\repos\smartcart_1\smartcart_1\obj\Debug\smartcart_1.csproj.CopyComplete
 C:\Users\SONG\source\repos\smartcart_1\smartcart_1\obj\Debug\smartcart_1.ProductDelete.resources
 C:\Users\SONG\source\repos\smartcart_1\smartcart_1\obj\Debug\smartcart_1.ProductModify.resources
+C:\Users\SONG\source\repos\smartcart_1\smartcart_1\obj\Debug\smartcart_1.MemberModify.resources

@@ -41,7 +41,9 @@ namespace smartcart_1
                 
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            btnLogin.BackColor = Color.FromArgb(51, 153, 255);
+            btnCancel.BackColor = Color.FromArgb(51, 153, 255);
+            
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -62,6 +64,7 @@ namespace smartcart_1
                     textPassword.Clear();
                 }
             }
+            
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
