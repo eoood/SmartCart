@@ -47,7 +47,7 @@ public class ShoppingList extends AppCompatActivity implements View.OnClickListe
     private DataOutputStream dos;
     private DataInputStream dis;
 
-    private String ip = "192.168.0.139";
+    private String ip = "192.168.0.154";
     private int port = 9999;
 
     private String str_num;
@@ -79,7 +79,7 @@ public class ShoppingList extends AppCompatActivity implements View.OnClickListe
         Thread checkUpdate = new Thread() {
             public void run() {
 
-                String newip = "192.168.0.139";//String.valueOf(ip_edit.getText());
+                String newip = "192.168.0.154";//String.valueOf(ip_edit.getText());
                 //String  send_msg = String.valueOf(send_edit.getText());
 
                 try {
@@ -116,7 +116,9 @@ public class ShoppingList extends AppCompatActivity implements View.OnClickListe
                             } catch (Exception e) {
                             }
                         }
-                        str_num = num;
+
+                        String nu = num.substring(0,num.length()-1);
+                        str_num = nu;
                         //Log.d("MainActivity", "ReadLine!!!! DATA....");
 
                         //ui쓰레드 안에서 타 쓰레드가 UI제어하려고 하면 오류 발생. Handler작업 필요
