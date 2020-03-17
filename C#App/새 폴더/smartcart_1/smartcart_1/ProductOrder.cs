@@ -16,8 +16,8 @@ namespace smartcart_1
         //콤보박스
         public void FillComboName()
         {
-            string constring = "datasource = http://oaoopw.dothome.co.kr; database=oaoopw; port=21; username=oaoopw; password=kara1136!;";
-            string Query = "select name from product";
+            string constring = "server = oaoopw.dothome.co.kr; database=oaoopw; username=oaoopw; password=kara1136!;";
+            string Query = "select name from Product";
             MySqlConnection conDataBase = new MySqlConnection(constring);
             MySqlCommand cmdDatabase = new MySqlCommand(Query, conDataBase);
             MySqlDataReader myReader;

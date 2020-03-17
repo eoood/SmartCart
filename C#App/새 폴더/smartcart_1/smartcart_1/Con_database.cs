@@ -11,7 +11,12 @@ namespace smartcart_1
 {
     class Con_database
     {
-        public static string constring1 = "datasource = localhost; username=root; password=apmsetup; database=smartcart";
+        static string server = "http://oaoopw.dothome.co.kr";
+        static string database = "oaoopw";
+        static string uid = "oaoopw";
+        static string password = "kara1136!";
+        string connectionString;
+        public static string constring1 = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
         MySqlConnection conn = new MySqlConnection();
         private string sConnString = "";
         public void ConnectDB()
