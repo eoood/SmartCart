@@ -11,7 +11,7 @@ namespace smartcart_1
 {
     class Con_database
     {
-        public static string constring1 = "datasource=localhost; username=root; password=apmsetup; database=smartcart";
+        public static string constring1 = "datasource=192.168.0.201; username=root; password=apmsetup; database=smartcart";
         MySqlConnection conn = new MySqlConnection();
         private string sConnString = "";
         public void ConnectDB()
