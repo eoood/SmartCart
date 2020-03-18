@@ -98,7 +98,7 @@ public class ShoppingList extends AppCompatActivity implements View.OnClickListe
                         dis = new DataInputStream(socket.getInputStream());
                         dos.writeUTF("connection request android to server");
                         String num = "";
-
+                        String nu="";
                         while (true) {
                             try {
                                 int a = (int) dis.read();
@@ -116,9 +116,13 @@ public class ShoppingList extends AppCompatActivity implements View.OnClickListe
                             } catch (Exception e) {
                             }
                         }
-                        str_num = num;
+                        nu = num.substring(0,num.length()-1);
+                        str_num = nu;
                         //Log.d("MainActivity", "ReadLine!!!! DATA....");
-
+                        if (str_num =="8801500102500")
+                        {
+                            str_num = "바나나";
+                        }
                         //ui쓰레드 안에서 타 쓰레드가 UI제어하려고 하면 오류 발생. Handler작업 필요
                         Message msg = handler.obtainMessage();
                         handler.sendMessage(msg);
