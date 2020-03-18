@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PDW\\IOT_project\\IOT_project\\D\\C#_server\\ConsoleApp1\\ConsoleApp1.csproj": {}
+    "D:\\PDW\\SmartCart\\Socket\\Android_Pc\\C#_server\\ConsoleApp1\\ConsoleApp1.csproj": {}
   },
   "projects": {
-    "D:\\PDW\\IOT_project\\IOT_project\\D\\C#_server\\ConsoleApp1\\ConsoleApp1.csproj": {
+    "D:\\PDW\\SmartCart\\Socket\\Android_Pc\\C#_server\\ConsoleApp1\\ConsoleApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PDW\\IOT_project\\IOT_project\\D\\C#_server\\ConsoleApp1\\ConsoleApp1.csproj",
+        "projectUniqueName": "D:\\PDW\\SmartCart\\Socket\\Android_Pc\\C#_server\\ConsoleApp1\\ConsoleApp1.csproj",
         "projectName": "ConsoleApp1",
-        "projectPath": "D:\\PDW\\IOT_project\\IOT_project\\D\\C#_server\\ConsoleApp1\\ConsoleApp1.csproj",
+        "projectPath": "D:\\PDW\\SmartCart\\Socket\\Android_Pc\\C#_server\\ConsoleApp1\\ConsoleApp1.csproj",
         "packagesPath": "C:\\Users\\MSG\\.nuget\\packages\\",
-        "outputPath": "D:\\PDW\\IOT_project\\IOT_project\\D\\C#_server\\ConsoleApp1\\obj\\",
+        "outputPath": "D:\\PDW\\SmartCart\\Socket\\Android_Pc\\C#_server\\ConsoleApp1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

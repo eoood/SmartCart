@@ -116,7 +116,9 @@ public class ShoppingList extends AppCompatActivity implements View.OnClickListe
                             } catch (Exception e) {
                             }
                         }
-                        str_num = num;
+
+                        String nu = num.substring(0,num.length()-1);
+                        str_num = nu;
                         //Log.d("MainActivity", "ReadLine!!!! DATA....");
 
                         //ui쓰레드 안에서 타 쓰레드가 UI제어하려고 하면 오류 발생. Handler작업 필요
