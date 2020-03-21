@@ -68,7 +68,7 @@ namespace smartcart_1
 
 
             //상품판매액
-            string constring = "server=localhost; database=smartcart; uid=root; password=apmsetup;";
+            string constring = "server=192.168.0.201;port=3307; database=smartcart; uid=root; password=apmsetup;";
             string Query = "select product, sum(price) from `order` group by product";
             MySqlConnection conDB = new MySqlConnection(constring);
             MySqlCommand cmdDB = new MySqlCommand(Query, conDB);

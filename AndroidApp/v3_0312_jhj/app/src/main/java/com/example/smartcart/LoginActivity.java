@@ -97,6 +97,7 @@ public class LoginActivity extends AppCompatActivity {
                                     intent.putExtra("userID", userID);
                                     intent.putExtra("userPass", userPass);
                                     startActivity(intent);
+                                    //APP - PC통신 코드입니다.
                                     if (cSocket == null) {
                                         usingName = et_id.getText().toString();
                                         //logger("접속중입니다...");

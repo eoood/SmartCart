@@ -15,7 +15,7 @@ namespace smartcart_1
     {
         public void FillComboName()
         {
-            string PdCstr = "datasource = localhost; database=smartcart; username=root; password=apmsetup;";
+            string PdCstr = "datasource = 192.168.0.201;port=3307; database=smartcart; username=root; password=apmsetup;";
             string Query = "SELECT name FROM product";
             MySqlConnection PdconDB = new MySqlConnection(PdCstr);
             MySqlCommand PDcmdDB = new MySqlCommand(Query, PdconDB);
@@ -46,7 +46,7 @@ namespace smartcart_1
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            string constring = "server=localhost; database=smartcart; uid=root; password=apmsetup;";
+            string constring = "server=192.168.0.201;port=3307; database=smartcart; uid=root; password=apmsetup;";
             string Query2 = "DELETE FROM product WHERE name = '" + cbBoxPdName.SelectedItem + "'";
             MySqlConnection conDB = new MySqlConnection(constring);
             MySqlCommand cmdDB = new MySqlCommand(Query2, conDB);
