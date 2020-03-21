@@ -17,7 +17,7 @@ namespace smartcart_1
         //콤보박스
         public void FillComboName()
         {
-            string constring = "datasource = 192.168.0.201;port=3307; database=smartcart; username=root; password=apmsetup;";
+            string constring = "datasource = localhost; database=smartcart; username=root; password=apmsetup;";
             string Query = "select * from product";
             MySqlConnection conDataBase = new MySqlConnection(constring);
             MySqlCommand cmdDatabase = new MySqlCommand(Query, conDataBase);
@@ -57,7 +57,7 @@ namespace smartcart_1
         private void btnOrder_Click(object sender, EventArgs e)
         {
 
-            string constring1 = "server=192.168.0.201;port=3307; uid=root; password=apmsetup; database=smartcart;";
+            string constring1 = "server=localhost; uid=root; password=apmsetup; database=smartcart;";
             string Query1 = "SELECT * FROM product WHERE name = '" + cbBoxPdName.SelectedItem + "'";
             string sQuantity = null;
             string PdQuantity = null;

@@ -35,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
     public Socket cSocket = null;
-    private String server = "192.168.0.14"; // 서버 ip주소
+    private String server = "192.168.0.201"; // 서버 ip주소
     private int port = 9999; // 포트번호
     public static String cartNumber = "1";
     public static String cartName;
@@ -99,7 +99,7 @@ public class LoginActivity extends AppCompatActivity {
 
                                     //APP - PC통신 코드입니다.
                                     if (cSocket == null) {
-                                        usingName = et_id.getText().toString();
+                                        usingName = et_id.getText().toString();//로그인 할 때의 ID를 저장
                                         //logger("접속중입니다...");
 
 
@@ -198,7 +198,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
-    class Connect extends Thread{
+    public class Connect extends Thread{
 
         private boolean flag = false; // 스레드 유지(종료)용 플래그
 

@@ -55,6 +55,7 @@ public class ShoppingList extends AppCompatActivity {
     //바코드 값 받아오기 위한 변수
     final static cartConnection cc = new cartConnection();
     static String barcode;// = cc.str_num;
+    static String cartNum;
 
     private DataOutputStream dos;
     private DataInputStream dis;
@@ -114,6 +115,8 @@ public class ShoppingList extends AppCompatActivity {
 
                 barcode = num.substring(0, num.length() - 1);
                 //cc.str_num = nu;
+                String temp[] = barcode.split("/");
+                cartNum = temp[1];
 
                 //Log.d("MainActivity", "ReadLine!!!! DATA....");
 

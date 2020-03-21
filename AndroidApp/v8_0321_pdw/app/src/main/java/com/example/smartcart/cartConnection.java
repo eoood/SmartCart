@@ -21,22 +21,34 @@ import java.net.Socket;
 
 public class cartConnection extends AppCompatActivity {
 
-    //rasp - app 통신 변수입니다.
+    //rasp - app 통신 변수입니다.***************************
     public static Socket socket;
 
     private BufferedReader networkReader;
     private PrintWriter networkWriter;
 
-    //private DataOutputStream dos;
-    //private DataInputStream dis;
     public static DataOutputStream dos;
     public static DataInputStream dis;
 
-
-    private String ip = "192.168.0.154";
+    private String ip = "192.168.0.154";// rasp ip주소
     private int port = 9999;
 
     public static String str_num;
+    //app - pcApp 통신 변수입니다.***************************
+    public Socket cSocket = null;
+    private String server = "192.168.0.201"; // pc서버 ip주소
+    //private int port = 9999; // 포트번호
+    public static String cartNumber;
+    public static String cartName;
+    public static String usingName;
+
+    public PrintWriter streamOut = null;
+    public BufferedReader streamIn = null;
+
+    public String nickName;
+    ///////////////////////////////////////////////////////
+
+    LoginActivity la = new LoginActivity();
 
     private Button button1;
 
@@ -64,7 +76,35 @@ public class cartConnection extends AppCompatActivity {
         builder.setPositiveButton("예",
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
+                        //rasp - app 통신코드입니다.
                         connect();
+
+                        //APP - PC통신 코드입니다.//////////////////////////////////////////////
+                        /*
+                        if (cSocket == null) {
+                            usingName = la.usingName;//로그인 할 때의 ID를 저장
+                            //logger("접속중입니다...");
+
+
+                            la.Connect c = new la.Connect();
+                            c.start();
+                        }
+
+                        cartName = "cartName_Test";
+
+                        if (cartName != null && !"".equals(cartName)) {
+
+                            new Thread(){
+                                public void run(){
+                                    sendMessage("[" + usingName + "] " + cartName);
+                                }
+                            }.start();
+                            //msgText.setText("");
+                        }
+
+                        */
+                        ////////////////////////////////////////////////////////////////
+
                         Toast.makeText(getApplicationContext(),"1번 카트와 연결하였습니다.",Toast.LENGTH_LONG).show();
                         button1.setEnabled(false);
                     }

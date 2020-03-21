@@ -26,7 +26,7 @@ namespace smartcart_1
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            string constring = "server=192.168.0.201;port=3307; database=smartcart; usid=root; password=apmsetup;";
+            string constring = "server=localhost; database=smartcart; usid=root; password=apmsetup;";
             string Query = "INSERT INTO product (name, price) VALUES ('" + textPdName.Text + "', '" + textPdPrice.Text + "')";
 
             MySqlConnection conDB = new MySqlConnection(constring);
