@@ -15,7 +15,7 @@ namespace smartcart_1
     {
         public void FillComboName()
         {
-            string PdCstr = "datasource = localhost; database=smartcart; username=root; password=apmsetup;";
+            string PdCstr = "datasource =localhost; database=smartcart; username=root; password=apmsetup;";
             string Query = "SELECT name FROM product";
             MySqlConnection PdconDB = new MySqlConnection(PdCstr);
             MySqlCommand PDcmdDB = new MySqlCommand(Query, PdconDB);
