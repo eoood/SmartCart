@@ -96,7 +96,7 @@ public class LoginActivity extends AppCompatActivity {
                                     UserInfo.id = userID;
                                     startActivity(intent);
 
-
+                                    /*
                                     //APP - PC통신 코드입니다.
                                     if (cSocket == null) {
                                         usingName = et_id.getText().toString();//로그인 할 때의 ID를 저장
@@ -117,7 +117,7 @@ public class LoginActivity extends AppCompatActivity {
                                             }
                                         }.start();
                                         //msgText.setText("");
-                                    }
+                                    }*/
                                 }
                             }
                             else{
