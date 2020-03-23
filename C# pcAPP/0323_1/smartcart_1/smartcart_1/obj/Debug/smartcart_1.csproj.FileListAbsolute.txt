@@ -43,3 +43,6 @@ C:\Users\한용구\Desktop\smartcart_1\smartcart_1\obj\Debug\smartcart_1.Product
 C:\Users\한용구\Desktop\smartcart_1\smartcart_1\obj\Debug\smartcart_1.ProductRegister.resources
 C:\Users\한용구\Desktop\smartcart_1\smartcart_1\obj\Debug\smartcart_1.Properties.Resources.resources
 C:\Users\한용구\Desktop\smartcart_1\smartcart_1\obj\Debug\smartcart_1.csproj.GenerateResource.Cache
+C:\SmartCart\C# pcAPP\0323_1\smartcart_1\smartcart_1\bin\Debug\smartcart_1.exe.config
+C:\SmartCart\C# pcAPP\0323_1\smartcart_1\smartcart_1\obj\Debug\smartcart_1.exe
+C:\SmartCart\C# pcAPP\0323_1\smartcart_1\smartcart_1\obj\Debug\smartcart_1.pdb
