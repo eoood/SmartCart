@@ -65,14 +65,14 @@ public class LoginActivity extends AppCompatActivity {
 
                                 if (userID.equals("admin")) {
                                     Intent intent = new Intent(LoginActivity.this, AdminMenu.class);
-                                    intent.putExtra("userID", userID);
-                                    intent.putExtra("userPass", userPass);
+                                    //intent.putExtra("userID", userID);
+                                    //intent.putExtra("userPass", userPass);
                                     startActivity(intent);
                                 }
                                 else{
                                     Intent intent = new Intent(LoginActivity.this, UserMenu.class);
                                     intent.putExtra("userID", userID);
-                                    intent.putExtra("userPass", userPass);
+                                    //intent.putExtra("userPass", userPass);
                                     UserInfo.id = userID;
                                     startActivity(intent);
                                 }
