@@ -16,6 +16,7 @@ import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 
@@ -80,13 +81,13 @@ public class cartConnection extends AppCompatActivity {
                         connect();
 
                         //APP - PC통신 코드입니다.//////////////////////////////////////////////
-                        /*
+
                         if (cSocket == null) {
-                            usingName = la.usingName;//로그인 할 때의 ID를 저장
+                            usingName = UserInfo.id;//로그인 할 때의 ID를 저장
                             //logger("접속중입니다...");
 
 
-                            la.Connect c = new la.Connect();
+                            Connect c = new Connect();
                             c.start();
                         }
 
@@ -102,7 +103,7 @@ public class cartConnection extends AppCompatActivity {
                             //msgText.setText("");
                         }
 
-                        */
+
                         ////////////////////////////////////////////////////////////////
 
                         Toast.makeText(getApplicationContext(),"1번 카트와 연결하였습니다.",Toast.LENGTH_LONG).show();
@@ -142,6 +143,33 @@ public class cartConnection extends AppCompatActivity {
 
             Log.w("MainActivity", "connection request android to server");
 
+            //연결 시작시 카트 번호를 바로 받기 위한 소스
+            try {
+                dis = new DataInputStream(socket.getInputStream());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            String num = "";
+            while (true) {
+                try {
+                    int a = (int) dis.read();
+                    char ch = (char) a;
+                    num += ch;
+                    Thread.sleep(100);
+                    Log.d("non1", "a : " + a);
+                            /*
+                             +이면 나간다....
+                             */
+                    if (a == 43) {
+                        break;
+                    }
+
+                } catch (Exception e) {
+                }
+            }
+
+            cartNumber = num.substring(0, num.length() - 1);
+            sendMessage(cartNumber+"/"+cartName+"/"+usingName);//연결되는 '순간' 카트에 대한 정보를 pc로 보내준다.
             /*
             while (true) {
                 try {
@@ -191,4 +219,101 @@ public class cartConnection extends AppCompatActivity {
 
         }
     };
+
+
+    //pc-App 통신 연결 함수입니다.
+    public void connect(String server, int port, String user) {
+        try {
+            cSocket = new Socket(server, port);
+            streamOut = new PrintWriter(cSocket.getOutputStream(), true); // 출력용 스트림
+            streamIn = new BufferedReader(new InputStreamReader(cSocket.getInputStream())); // 입력용 스트림
+
+            //sendMessage("# 새로운 이용자[" + user + "]님이 들어왔습니다.");
+            //sendMessage(cartNumber+"/"+cartName+"/"+usingName);//연결되는 '순간' 카트에 대한 정보를 pc로 보내준다.
+
+            //cThread = new chatThread();
+            //cThread.start();
+
+        }catch (Exception ex) {
+            //logger("접속이 제대로 이루어 지지 않았습니다." + ex);
+        }
+    }
+
+
+    public void onDestroy() { // 앱이 소멸되면
+        super.onDestroy();
+        if (cSocket != null) {
+            sendMessage("# [" + nickName + "]님이 나가셨습니다.");
+        }
+    }
+
+
+    private void sendMessage(String MSG) {
+        try {
+            streamOut.println(MSG); // 서버에 메세지를 보내줍니다.
+        } catch (Exception ex) {
+            //logger(ex.toString());
+        }
+
+    }
+
+
+    Handler mHandler = new Handler() { // 스레드에서 메세지를 받을 핸들러.
+        public void handleMessage(Message msg) {
+            switch (msg.what) {
+                case 0: // 채팅 메세지를 받아온다.
+                    //logger(msg.obj.toString());
+                    break;
+                case 1: // 소켓접속을 끊는다.
+                    try {
+                        cSocket.close();
+                        cSocket = null;
+
+                        //logger("접속이 끊어졌습니다.");
+
+                    } catch (Exception e) {
+                        //logger("접속이 이미 끊겨 있습니다." + e.getMessage());
+                        finish();
+                    }
+                    break;
+            }
+        }
+    };
+
+
+    public class Connect extends Thread{
+
+        private boolean flag = false; // 스레드 유지(종료)용 플래그
+
+        public void run(){
+            super.run();
+            connect(server, port , usingName);
+            //sendMessage("안녕하세요");
+            try {
+                while (!flag) { // 플래그가 false일경우에 루프
+                    String msgs;
+                    Message msg = new Message();
+                    msg.what = 0;
+                    msgs = streamIn.readLine(); // 서버에서 올 메세지를 기다린다.
+                    msg.obj = msgs;
+
+                    mHandler.sendMessage(msg); // 핸들러로 메세지 전송
+
+                    if (msgs.equals("# [" + nickName + "]님이 나가셨습니다.")) { // 서버에서 온 메세지가 종료 메세지라면
+                        flag = true; // 스레드 종료를 위해 플래그를 true로 바꿈.
+                        msg = new Message();
+                        msg.what = 1; // 종료메세지
+                        mHandler.sendMessage(msg);
+                    }
+                }
+
+            }catch(Exception e) {
+                //logger(e.getMessage());
+            }
+        }
+    }
+
+
+
+
 }
