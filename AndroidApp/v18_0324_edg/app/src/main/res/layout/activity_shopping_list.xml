@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff">
@@ -92,8 +96,8 @@
 
     <TextView
         android:id="@+id/pay"
-        android:layout_width="match_parent"
-        android:layout_height="330dp"
+        android:layout_width="393dp"
+        android:layout_height="114dp"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="55dp"
@@ -140,8 +144,8 @@
         android:id="@+id/btn_return"
         android:layout_width="108dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="100dp"
-        android:layout_marginRight="100dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginRight="92dp"
         android:background="#A9A9F5"
         android:fontFamily="@font/interpark"
         android:text="반품하기"
@@ -150,14 +154,14 @@
         app:layout_constraintBottom_toBottomOf="@+id/btn_sales"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pay_result"
-        app:layout_constraintVertical_bias="0.178"></Button>
+        app:layout_constraintVertical_bias="0.062"></Button>
 
     <Button
         android:id="@+id/btn_order"
         android:layout_width="108dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
-        android:layout_marginLeft="68dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginLeft="72dp"
         android:background="#A9A9F5"
         android:fontFamily="@font/interpark"
         android:text="구매하기"
@@ -166,7 +170,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/btn_home"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView47"
-        app:layout_constraintVertical_bias="0.178"></Button>
+        app:layout_constraintVertical_bias="0.062"></Button>
 
     <Button
         android:id="@+id/btn_home"
@@ -222,3 +226,4 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
