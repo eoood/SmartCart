@@ -32,3 +32,11 @@ D:\SCH\smartcart\obj\Debug\smartcart.csproj.CopyComplete
 D:\SCH\smartcart\obj\Debug\sizetest.exe
 D:\SCH\smartcart\obj\Debug\sizetest.pdb
 D:\SCH\smartcart\obj\Debug\smartcart.LoginChecker.resources
+D:\songchanho\SmartCart\C# pcAPP\0323_2\obj\Debug\smartcart.csprojAssemblyReference.cache
+D:\songchanho\SmartCart\C# pcAPP\0323_2\obj\Debug\sizetest.Login.resources
+D:\songchanho\SmartCart\C# pcAPP\0323_2\obj\Debug\smartcart.LoginChecker.resources
+D:\songchanho\SmartCart\C# pcAPP\0323_2\obj\Debug\sizetest.Main.resources
+D:\songchanho\SmartCart\C# pcAPP\0323_2\obj\Debug\sizetest.Properties.Resources.resources
+D:\songchanho\SmartCart\C# pcAPP\0323_2\obj\Debug\smartcart.csproj.GenerateResource.cache
+D:\songchanho\SmartCart\C# pcAPP\0323_2\obj\Debug\sizetest.exe
+D:\songchanho\SmartCart\C# pcAPP\0323_2\obj\Debug\sizetest.pdb

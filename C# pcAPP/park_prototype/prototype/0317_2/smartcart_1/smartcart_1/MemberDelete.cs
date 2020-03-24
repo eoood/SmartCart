@@ -85,7 +85,7 @@ namespace smartcart_1
                 conDataBase2.Open();
                 myReader2 = cmdDatabase2.ExecuteReader();
                 MySqlDataAdapter adapter = new MySqlDataAdapter(Query2, conDataBase2);
-                MySqlCommandBuilder builder = new MySqlCommandBuilder(adapter);                
+                MySqlCommandBuilder builder = new MySqlCommandBuilder(adapter);
             }
             catch (Exception ex)
             {
