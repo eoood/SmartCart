@@ -11,6 +11,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -26,8 +34,11 @@ public class ShoppingList extends AppCompatActivity {
 
     //바코드 값 받아오기 위한 변수
     final static cartConnection cc = new cartConnection();
-    static String barcode;// = cc.str_num;
+    static String barcode_cartNum;// = cc.str_num;
+    static String barcode;
     static String cartNum;
+
+    static String db_value_pdInfo;
 
     private DataOutputStream dos;
     private DataInputStream dis;
@@ -39,7 +50,6 @@ public class ShoppingList extends AppCompatActivity {
         setContentView(R.layout.activity_shopping_list);
 
         pay = (TextView) findViewById((R.id.pay));
-
 
         //setListView();
         //MainThreadException을 막기 위해 readBarcode()함수를 새로운 쓰레드에서 돌림
@@ -94,8 +104,11 @@ public class ShoppingList extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-    }
 
+
+
+
+    }
 
 //*************************************************************************************************************************
 
@@ -136,17 +149,26 @@ public class ShoppingList extends AppCompatActivity {
                     }
                 }
 
-                barcode = num.substring(0, num.length() - 1);
+                barcode_cartNum = num.substring(0, num.length() - 1);
                 //cc.str_num = nu;
-                String temp[] = barcode.split("/");
+                String temp[] = barcode_cartNum.split("/");
+                barcode = temp[0];
                 cartNum = temp[1];
 
+
+                ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                new Thread() {
+                    public void run() {
+                        getInfo();
+                    }
+                }.start();
+                /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
                 //Log.d("MainActivity", "ReadLine!!!! DATA....");
 
                 //ui쓰레드 안에서 타 쓰레드가 UI제어하려고 하면 오류 발생. Handler작업 필요
-                Message msg = handler.obtainMessage();
-                handler.sendMessage(msg);
+                //Message msg = handler.obtainMessage();
+                //handler.sendMessage(msg);
 
 
                 //pay.setText(nu);
@@ -160,13 +182,78 @@ public class ShoppingList extends AppCompatActivity {
         }
     }
 
+
+
+    public void getInfo(){
+        Response.Listener<String> responseListener = new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    JSONObject jsonObject = new JSONObject(response);
+                    String success = jsonObject.getString("response");
+
+                    String result = "";
+                    //     Log.d("Response","value : " + success);
+                    if (success.length() > 0) {
+                        JSONArray obj = new JSONArray(success);
+                        for (int i = 0; i < obj.length(); i++) {
+                            JSONObject user = obj.getJSONObject(i);
+
+                            result += user.getString("name") + "/" + user.getString("price");
+                            Log.d("Response", "getstring : " + result);
+                            //db_value_pdInfo = result;//상품명과 가격 저장
+                            //Log.d("db_value_pdInfo", db_value_pdInfo);
+
+
+                            db_value_pdInfo = result;
+
+
+                            Log.d("db_value_pdInfo", db_value_pdInfo);
+                        }
+
+                        Message msg = handler.obtainMessage();
+                        handler.sendMessage(msg);
+
+                        //Log.d("hello", db_value_pdInfo);
+                        //Log.d("world", result);
+
+                        //다른 화면으로 넘겨주기 위한 코드(지금은 필요 없음, 바코드 값을 change_information 클래스에서 사용할 수 있도록 이동시킴)
+                        Intent intent = new Intent(ShoppingList.this, change_information.class);
+                        intent.putExtra("barcode", barcode);
+                        startActivity(intent);
+                        Log.d("Response", "intent");
+                    } else {
+                        Intent intent = new Intent(ShoppingList.this, change_information.class);
+                        intent.putExtra("barcode", barcode);
+                        startActivity(intent);
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+        BarcodeRequest barcodeRequest = new BarcodeRequest(barcode, responseListener);
+        RequestQueue queue = Volley.newRequestQueue(ShoppingList.this);
+        queue.add(barcodeRequest);
+        Log.d("Response", "getstring1 : " + barcode);
+
+
+    }
+
+
+
+
+
     Handler handler = new Handler() {
 
         public void handleMessage(Message msg) {
 
             // 내가 원하는 UI 변경 작업!!
-            //pay.setText(barcode);
-            pay.append(barcode);
+            pay.append(db_value_pdInfo+"\r\n");
+            Log.d("hello",":"+db_value_pdInfo);
+            //pay.append(barcode);
+            //Log.d("hello",barcode);
+
             //list.add(barcode);
             //cc.str_num = "";
         }

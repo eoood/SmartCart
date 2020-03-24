@@ -53,6 +53,7 @@ public class change_information extends AppCompatActivity  {
 
 
 
+        /*
         try {
             Log.d("response", "intent:" + intent.getStringExtra("userInfoList"));
             JSONObject jsonObject = new JSONObject(intent.getStringExtra("userInfoList"));
@@ -74,7 +75,7 @@ public class change_information extends AppCompatActivity  {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
+        */
 
         btn_change_information = findViewById(R.id.btn_change_information);
 
