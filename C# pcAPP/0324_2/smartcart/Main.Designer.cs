@@ -108,9 +108,10 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBox1.Location = new System.Drawing.Point(-5, -2);
+            this.pictureBox1.Location = new System.Drawing.Point(-6, -2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1033, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(1181, 62);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -123,9 +124,10 @@
             this.btnCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCart.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnCart.ForeColor = System.Drawing.Color.White;
-            this.btnCart.Location = new System.Drawing.Point(3, 54);
+            this.btnCart.Location = new System.Drawing.Point(3, 68);
+            this.btnCart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCart.Name = "btnCart";
-            this.btnCart.Size = new System.Drawing.Size(98, 87);
+            this.btnCart.Size = new System.Drawing.Size(112, 109);
             this.btnCart.TabIndex = 1;
             this.btnCart.UseVisualStyleBackColor = false;
             this.btnCart.Click += new System.EventHandler(this.btnCart_Click);
@@ -133,9 +135,10 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.SystemColors.Window;
-            this.pictureBox3.Location = new System.Drawing.Point(100, 42);
+            this.pictureBox3.Location = new System.Drawing.Point(114, 52);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(159, 568);
+            this.pictureBox3.Size = new System.Drawing.Size(182, 710);
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
             // 
@@ -148,9 +151,10 @@
             this.btnMember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMember.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnMember.ForeColor = System.Drawing.Color.White;
-            this.btnMember.Location = new System.Drawing.Point(3, 141);
+            this.btnMember.Location = new System.Drawing.Point(3, 176);
+            this.btnMember.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMember.Name = "btnMember";
-            this.btnMember.Size = new System.Drawing.Size(98, 87);
+            this.btnMember.Size = new System.Drawing.Size(112, 109);
             this.btnMember.TabIndex = 1;
             this.btnMember.UseVisualStyleBackColor = false;
             this.btnMember.Click += new System.EventHandler(this.btnMember_Click);
@@ -164,9 +168,10 @@
             this.btnProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProduct.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnProduct.ForeColor = System.Drawing.Color.White;
-            this.btnProduct.Location = new System.Drawing.Point(3, 226);
+            this.btnProduct.Location = new System.Drawing.Point(3, 282);
+            this.btnProduct.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnProduct.Name = "btnProduct";
-            this.btnProduct.Size = new System.Drawing.Size(98, 87);
+            this.btnProduct.Size = new System.Drawing.Size(112, 109);
             this.btnProduct.TabIndex = 1;
             this.btnProduct.UseVisualStyleBackColor = false;
             this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
@@ -180,9 +185,10 @@
             this.btnInbound.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInbound.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnInbound.ForeColor = System.Drawing.Color.White;
-            this.btnInbound.Location = new System.Drawing.Point(3, 313);
+            this.btnInbound.Location = new System.Drawing.Point(3, 391);
+            this.btnInbound.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnInbound.Name = "btnInbound";
-            this.btnInbound.Size = new System.Drawing.Size(98, 87);
+            this.btnInbound.Size = new System.Drawing.Size(112, 109);
             this.btnInbound.TabIndex = 1;
             this.btnInbound.UseVisualStyleBackColor = false;
             this.btnInbound.Click += new System.EventHandler(this.btnInbound_Click);
@@ -196,9 +202,10 @@
             this.btnOutbound.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOutbound.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnOutbound.ForeColor = System.Drawing.Color.White;
-            this.btnOutbound.Location = new System.Drawing.Point(3, 400);
+            this.btnOutbound.Location = new System.Drawing.Point(3, 500);
+            this.btnOutbound.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnOutbound.Name = "btnOutbound";
-            this.btnOutbound.Size = new System.Drawing.Size(98, 87);
+            this.btnOutbound.Size = new System.Drawing.Size(112, 109);
             this.btnOutbound.TabIndex = 1;
             this.btnOutbound.UseVisualStyleBackColor = false;
             this.btnOutbound.Click += new System.EventHandler(this.btnOutbound_Click);
@@ -212,9 +219,10 @@
             this.btnChart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChart.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnChart.ForeColor = System.Drawing.Color.White;
-            this.btnChart.Location = new System.Drawing.Point(3, 487);
+            this.btnChart.Location = new System.Drawing.Point(3, 609);
+            this.btnChart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnChart.Name = "btnChart";
-            this.btnChart.Size = new System.Drawing.Size(98, 87);
+            this.btnChart.Size = new System.Drawing.Size(112, 109);
             this.btnChart.TabIndex = 1;
             this.btnChart.UseVisualStyleBackColor = false;
             this.btnChart.Click += new System.EventHandler(this.btnChart_Click_1);
@@ -225,9 +233,9 @@
             this.LblMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.LblMain.Font = new System.Drawing.Font("굴림", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LblMain.ForeColor = System.Drawing.SystemColors.Window;
-            this.LblMain.Location = new System.Drawing.Point(82, 10);
+            this.LblMain.Location = new System.Drawing.Point(94, 12);
             this.LblMain.Name = "LblMain";
-            this.LblMain.Size = new System.Drawing.Size(514, 29);
+            this.LblMain.Size = new System.Drawing.Size(650, 37);
             this.LblMain.TabIndex = 4;
             this.LblMain.Text = "ICD SMARTCART ADMINISTRATOR";
             // 
@@ -237,9 +245,9 @@
             this.LblCart.BackColor = System.Drawing.SystemColors.Window;
             this.LblCart.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LblCart.ForeColor = System.Drawing.Color.Black;
-            this.LblCart.Location = new System.Drawing.Point(103, 54);
+            this.LblCart.Location = new System.Drawing.Point(118, 68);
             this.LblCart.Name = "LblCart";
-            this.LblCart.Size = new System.Drawing.Size(116, 19);
+            this.LblCart.Size = new System.Drawing.Size(144, 24);
             this.LblCart.TabIndex = 6;
             this.LblCart.Text = "실시간 정보";
             // 
@@ -249,9 +257,9 @@
             this.LblUsingUser.BackColor = System.Drawing.SystemColors.Window;
             this.LblUsingUser.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LblUsingUser.ForeColor = System.Drawing.Color.Black;
-            this.LblUsingUser.Location = new System.Drawing.Point(113, 106);
+            this.LblUsingUser.Location = new System.Drawing.Point(129, 132);
             this.LblUsingUser.Name = "LblUsingUser";
-            this.LblUsingUser.Size = new System.Drawing.Size(89, 13);
+            this.LblUsingUser.Size = new System.Drawing.Size(115, 17);
             this.LblUsingUser.TabIndex = 6;
             this.LblUsingUser.Text = "실시간 사용자";
             // 
@@ -261,9 +269,9 @@
             this.LblCartInfo.BackColor = System.Drawing.SystemColors.Window;
             this.LblCartInfo.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LblCartInfo.ForeColor = System.Drawing.Color.Black;
-            this.LblCartInfo.Location = new System.Drawing.Point(113, 80);
+            this.LblCartInfo.Location = new System.Drawing.Point(129, 100);
             this.LblCartInfo.Name = "LblCartInfo";
-            this.LblCartInfo.Size = new System.Drawing.Size(63, 13);
+            this.LblCartInfo.Size = new System.Drawing.Size(81, 17);
             this.LblCartInfo.TabIndex = 6;
             this.LblCartInfo.Text = "카트 정보";
             // 
@@ -273,9 +281,9 @@
             this.LblMember.BackColor = System.Drawing.SystemColors.Window;
             this.LblMember.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LblMember.ForeColor = System.Drawing.Color.Black;
-            this.LblMember.Location = new System.Drawing.Point(103, 141);
+            this.LblMember.Location = new System.Drawing.Point(118, 176);
             this.LblMember.Name = "LblMember";
-            this.LblMember.Size = new System.Drawing.Size(96, 19);
+            this.LblMember.Size = new System.Drawing.Size(119, 24);
             this.LblMember.TabIndex = 6;
             this.LblMember.Text = "회원 관리";
             this.LblMember.Visible = false;
@@ -287,9 +295,9 @@
             this.LblProduct.BackColor = System.Drawing.SystemColors.Window;
             this.LblProduct.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LblProduct.ForeColor = System.Drawing.Color.Black;
-            this.LblProduct.Location = new System.Drawing.Point(103, 226);
+            this.LblProduct.Location = new System.Drawing.Point(118, 282);
             this.LblProduct.Name = "LblProduct";
-            this.LblProduct.Size = new System.Drawing.Size(96, 19);
+            this.LblProduct.Size = new System.Drawing.Size(119, 24);
             this.LblProduct.TabIndex = 6;
             this.LblProduct.Text = "상품 관리";
             this.LblProduct.Visible = false;
@@ -301,9 +309,9 @@
             this.LblInbound.BackColor = System.Drawing.SystemColors.Window;
             this.LblInbound.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LblInbound.ForeColor = System.Drawing.Color.Black;
-            this.LblInbound.Location = new System.Drawing.Point(103, 313);
+            this.LblInbound.Location = new System.Drawing.Point(118, 391);
             this.LblInbound.Name = "LblInbound";
-            this.LblInbound.Size = new System.Drawing.Size(96, 19);
+            this.LblInbound.Size = new System.Drawing.Size(119, 24);
             this.LblInbound.TabIndex = 6;
             this.LblInbound.Text = "입고 내역";
             this.LblInbound.Visible = false;
@@ -315,9 +323,9 @@
             this.LblOutbound.BackColor = System.Drawing.SystemColors.Window;
             this.LblOutbound.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LblOutbound.ForeColor = System.Drawing.Color.Black;
-            this.LblOutbound.Location = new System.Drawing.Point(103, 400);
+            this.LblOutbound.Location = new System.Drawing.Point(118, 500);
             this.LblOutbound.Name = "LblOutbound";
-            this.LblOutbound.Size = new System.Drawing.Size(96, 19);
+            this.LblOutbound.Size = new System.Drawing.Size(119, 24);
             this.LblOutbound.TabIndex = 6;
             this.LblOutbound.Text = "출고 내역";
             this.LblOutbound.Visible = false;
@@ -329,9 +337,9 @@
             this.LblChart.BackColor = System.Drawing.SystemColors.Window;
             this.LblChart.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LblChart.ForeColor = System.Drawing.Color.Black;
-            this.LblChart.Location = new System.Drawing.Point(103, 487);
+            this.LblChart.Location = new System.Drawing.Point(118, 609);
             this.LblChart.Name = "LblChart";
-            this.LblChart.Size = new System.Drawing.Size(56, 19);
+            this.LblChart.Size = new System.Drawing.Size(69, 24);
             this.LblChart.TabIndex = 6;
             this.LblChart.Text = "통 계";
             this.LblChart.Visible = false;
@@ -343,9 +351,9 @@
             this.LblMemDel.BackColor = System.Drawing.SystemColors.Window;
             this.LblMemDel.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LblMemDel.ForeColor = System.Drawing.Color.Black;
-            this.LblMemDel.Location = new System.Drawing.Point(113, 169);
+            this.LblMemDel.Location = new System.Drawing.Point(129, 211);
             this.LblMemDel.Name = "LblMemDel";
-            this.LblMemDel.Size = new System.Drawing.Size(63, 13);
+            this.LblMemDel.Size = new System.Drawing.Size(81, 17);
             this.LblMemDel.TabIndex = 6;
             this.LblMemDel.Text = "회원 삭제";
             this.LblMemDel.Visible = false;
@@ -357,9 +365,9 @@
             this.LblPdOrder.BackColor = System.Drawing.SystemColors.Window;
             this.LblPdOrder.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LblPdOrder.ForeColor = System.Drawing.Color.Black;
-            this.LblPdOrder.Location = new System.Drawing.Point(113, 256);
+            this.LblPdOrder.Location = new System.Drawing.Point(129, 320);
             this.LblPdOrder.Name = "LblPdOrder";
-            this.LblPdOrder.Size = new System.Drawing.Size(63, 13);
+            this.LblPdOrder.Size = new System.Drawing.Size(81, 17);
             this.LblPdOrder.TabIndex = 6;
             this.LblPdOrder.Text = "상품 주문";
             this.LblPdOrder.Visible = false;
@@ -371,9 +379,9 @@
             this.LblPriceMdfy.BackColor = System.Drawing.SystemColors.Window;
             this.LblPriceMdfy.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LblPriceMdfy.ForeColor = System.Drawing.Color.Black;
-            this.LblPriceMdfy.Location = new System.Drawing.Point(113, 275);
+            this.LblPriceMdfy.Location = new System.Drawing.Point(129, 344);
             this.LblPriceMdfy.Name = "LblPriceMdfy";
-            this.LblPriceMdfy.Size = new System.Drawing.Size(63, 13);
+            this.LblPriceMdfy.Size = new System.Drawing.Size(81, 17);
             this.LblPriceMdfy.TabIndex = 6;
             this.LblPriceMdfy.Text = "가격 수정";
             this.LblPriceMdfy.Visible = false;
@@ -385,9 +393,9 @@
             this.LblPdRegi.BackColor = System.Drawing.SystemColors.Window;
             this.LblPdRegi.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LblPdRegi.ForeColor = System.Drawing.Color.Black;
-            this.LblPdRegi.Location = new System.Drawing.Point(113, 294);
+            this.LblPdRegi.Location = new System.Drawing.Point(129, 368);
             this.LblPdRegi.Name = "LblPdRegi";
-            this.LblPdRegi.Size = new System.Drawing.Size(63, 13);
+            this.LblPdRegi.Size = new System.Drawing.Size(81, 17);
             this.LblPdRegi.TabIndex = 6;
             this.LblPdRegi.Text = "상품 등록";
             this.LblPdRegi.Visible = false;
@@ -399,9 +407,9 @@
             this.LblPdDel.BackColor = System.Drawing.SystemColors.Window;
             this.LblPdDel.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LblPdDel.ForeColor = System.Drawing.Color.Black;
-            this.LblPdDel.Location = new System.Drawing.Point(113, 313);
+            this.LblPdDel.Location = new System.Drawing.Point(129, 391);
             this.LblPdDel.Name = "LblPdDel";
-            this.LblPdDel.Size = new System.Drawing.Size(63, 13);
+            this.LblPdDel.Size = new System.Drawing.Size(81, 17);
             this.LblPdDel.TabIndex = 6;
             this.LblPdDel.Text = "상품 삭제";
             this.LblPdDel.Visible = false;
@@ -413,9 +421,9 @@
             this.LblPdInbound.BackColor = System.Drawing.SystemColors.Window;
             this.LblPdInbound.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LblPdInbound.ForeColor = System.Drawing.Color.Black;
-            this.LblPdInbound.Location = new System.Drawing.Point(113, 342);
+            this.LblPdInbound.Location = new System.Drawing.Point(129, 428);
             this.LblPdInbound.Name = "LblPdInbound";
-            this.LblPdInbound.Size = new System.Drawing.Size(93, 13);
+            this.LblPdInbound.Size = new System.Drawing.Size(120, 17);
             this.LblPdInbound.TabIndex = 6;
             this.LblPdInbound.Text = "상품 입고 내역";
             this.LblPdInbound.Visible = false;
@@ -427,9 +435,9 @@
             this.LblPdOutbound.BackColor = System.Drawing.SystemColors.Window;
             this.LblPdOutbound.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LblPdOutbound.ForeColor = System.Drawing.Color.Black;
-            this.LblPdOutbound.Location = new System.Drawing.Point(113, 429);
+            this.LblPdOutbound.Location = new System.Drawing.Point(129, 536);
             this.LblPdOutbound.Name = "LblPdOutbound";
-            this.LblPdOutbound.Size = new System.Drawing.Size(93, 13);
+            this.LblPdOutbound.Size = new System.Drawing.Size(120, 17);
             this.LblPdOutbound.TabIndex = 6;
             this.LblPdOutbound.Text = "상품 출고 내역";
             this.LblPdOutbound.Visible = false;
@@ -441,9 +449,9 @@
             this.LblSaleChart.BackColor = System.Drawing.SystemColors.Window;
             this.LblSaleChart.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LblSaleChart.ForeColor = System.Drawing.Color.Black;
-            this.LblSaleChart.Location = new System.Drawing.Point(113, 515);
+            this.LblSaleChart.Location = new System.Drawing.Point(129, 644);
             this.LblSaleChart.Name = "LblSaleChart";
-            this.LblSaleChart.Size = new System.Drawing.Size(102, 13);
+            this.LblSaleChart.Size = new System.Drawing.Size(132, 17);
             this.LblSaleChart.TabIndex = 6;
             this.LblSaleChart.Text = "총매출액 그래프";
             this.LblSaleChart.Visible = false;
@@ -455,9 +463,9 @@
             this.LblProdChart.BackColor = System.Drawing.SystemColors.Window;
             this.LblProdChart.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LblProdChart.ForeColor = System.Drawing.Color.Black;
-            this.LblProdChart.Location = new System.Drawing.Point(113, 544);
+            this.LblProdChart.Location = new System.Drawing.Point(129, 680);
             this.LblProdChart.Name = "LblProdChart";
-            this.LblProdChart.Size = new System.Drawing.Size(119, 13);
+            this.LblProdChart.Size = new System.Drawing.Size(154, 17);
             this.LblProdChart.TabIndex = 6;
             this.LblProdChart.Text = "상품별 판매 그래프";
             this.LblProdChart.Visible = false;
@@ -469,11 +477,13 @@
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.Window;
-            this.dataGridView1.Location = new System.Drawing.Point(319, 124);
+            this.dataGridView1.Location = new System.Drawing.Point(365, 155);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(554, 169);
+            this.dataGridView1.Size = new System.Drawing.Size(633, 211);
             this.dataGridView1.TabIndex = 7;
             // 
             // LblLiveInfo
@@ -481,9 +491,9 @@
             this.LblLiveInfo.AutoSize = true;
             this.LblLiveInfo.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LblLiveInfo.ForeColor = System.Drawing.SystemColors.Window;
-            this.LblLiveInfo.Location = new System.Drawing.Point(328, 85);
+            this.LblLiveInfo.Location = new System.Drawing.Point(375, 106);
             this.LblLiveInfo.Name = "LblLiveInfo";
-            this.LblLiveInfo.Size = new System.Drawing.Size(358, 21);
+            this.LblLiveInfo.Size = new System.Drawing.Size(454, 27);
             this.LblLiveInfo.TabIndex = 8;
             this.LblLiveInfo.Text = "실시간 카트 정보 및 실시간 사용자";
             // 
@@ -492,9 +502,9 @@
             this.LblNowDate.AutoSize = true;
             this.LblNowDate.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LblNowDate.ForeColor = System.Drawing.SystemColors.Window;
-            this.LblNowDate.Location = new System.Drawing.Point(651, 544);
+            this.LblNowDate.Location = new System.Drawing.Point(744, 680);
             this.LblNowDate.Name = "LblNowDate";
-            this.LblNowDate.Size = new System.Drawing.Size(296, 19);
+            this.LblNowDate.Size = new System.Drawing.Size(373, 24);
             this.LblNowDate.TabIndex = 9;
             this.LblNowDate.Text = "2020년 03월 24일 화요일 12:11";
             // 
@@ -503,18 +513,19 @@
             this.LblAdmin.AutoSize = true;
             this.LblAdmin.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LblAdmin.ForeColor = System.Drawing.SystemColors.Window;
-            this.LblAdmin.Location = new System.Drawing.Point(652, 573);
+            this.LblAdmin.Location = new System.Drawing.Point(745, 716);
             this.LblAdmin.Name = "LblAdmin";
-            this.LblAdmin.Size = new System.Drawing.Size(191, 19);
+            this.LblAdmin.Size = new System.Drawing.Size(236, 24);
             this.LblAdmin.TabIndex = 10;
             this.LblAdmin.Text = "Admin님 안녕하세요";
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.pictureBox2.Location = new System.Drawing.Point(-5, 43);
+            this.pictureBox2.Location = new System.Drawing.Point(-6, 54);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(108, 568);
+            this.pictureBox2.Size = new System.Drawing.Size(123, 710);
             this.pictureBox2.TabIndex = 12;
             this.pictureBox2.TabStop = false;
             // 
@@ -523,9 +534,10 @@
             this.picBoxCheck1.BackColor = System.Drawing.SystemColors.Window;
             this.picBoxCheck1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxCheck1.BackgroundImage")));
             this.picBoxCheck1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picBoxCheck1.Location = new System.Drawing.Point(177, 76);
+            this.picBoxCheck1.Location = new System.Drawing.Point(202, 95);
+            this.picBoxCheck1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.picBoxCheck1.Name = "picBoxCheck1";
-            this.picBoxCheck1.Size = new System.Drawing.Size(20, 20);
+            this.picBoxCheck1.Size = new System.Drawing.Size(23, 25);
             this.picBoxCheck1.TabIndex = 13;
             this.picBoxCheck1.TabStop = false;
             // 
@@ -534,9 +546,10 @@
             this.picBoxCheck5.BackColor = System.Drawing.SystemColors.Window;
             this.picBoxCheck5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxCheck5.BackgroundImage")));
             this.picBoxCheck5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picBoxCheck5.Location = new System.Drawing.Point(198, 225);
+            this.picBoxCheck5.Location = new System.Drawing.Point(226, 281);
+            this.picBoxCheck5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.picBoxCheck5.Name = "picBoxCheck5";
-            this.picBoxCheck5.Size = new System.Drawing.Size(20, 20);
+            this.picBoxCheck5.Size = new System.Drawing.Size(23, 25);
             this.picBoxCheck5.TabIndex = 13;
             this.picBoxCheck5.TabStop = false;
             // 
@@ -545,9 +558,10 @@
             this.picBoxCheck2.BackColor = System.Drawing.SystemColors.Window;
             this.picBoxCheck2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxCheck2.BackgroundImage")));
             this.picBoxCheck2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picBoxCheck2.Location = new System.Drawing.Point(205, 101);
+            this.picBoxCheck2.Location = new System.Drawing.Point(234, 126);
+            this.picBoxCheck2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.picBoxCheck2.Name = "picBoxCheck2";
-            this.picBoxCheck2.Size = new System.Drawing.Size(20, 20);
+            this.picBoxCheck2.Size = new System.Drawing.Size(23, 25);
             this.picBoxCheck2.TabIndex = 13;
             this.picBoxCheck2.TabStop = false;
             // 
@@ -556,9 +570,10 @@
             this.picBoxCheck6.BackColor = System.Drawing.SystemColors.Window;
             this.picBoxCheck6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxCheck6.BackgroundImage")));
             this.picBoxCheck6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picBoxCheck6.Location = new System.Drawing.Point(179, 252);
+            this.picBoxCheck6.Location = new System.Drawing.Point(205, 315);
+            this.picBoxCheck6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.picBoxCheck6.Name = "picBoxCheck6";
-            this.picBoxCheck6.Size = new System.Drawing.Size(20, 20);
+            this.picBoxCheck6.Size = new System.Drawing.Size(23, 25);
             this.picBoxCheck6.TabIndex = 13;
             this.picBoxCheck6.TabStop = false;
             // 
@@ -567,9 +582,10 @@
             this.picBoxCheck7.BackColor = System.Drawing.SystemColors.Window;
             this.picBoxCheck7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxCheck7.BackgroundImage")));
             this.picBoxCheck7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picBoxCheck7.Location = new System.Drawing.Point(179, 273);
+            this.picBoxCheck7.Location = new System.Drawing.Point(205, 341);
+            this.picBoxCheck7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.picBoxCheck7.Name = "picBoxCheck7";
-            this.picBoxCheck7.Size = new System.Drawing.Size(20, 20);
+            this.picBoxCheck7.Size = new System.Drawing.Size(23, 25);
             this.picBoxCheck7.TabIndex = 13;
             this.picBoxCheck7.TabStop = false;
             // 
@@ -578,9 +594,10 @@
             this.picBoxCheck8.BackColor = System.Drawing.SystemColors.Window;
             this.picBoxCheck8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxCheck8.BackgroundImage")));
             this.picBoxCheck8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picBoxCheck8.Location = new System.Drawing.Point(179, 290);
+            this.picBoxCheck8.Location = new System.Drawing.Point(205, 362);
+            this.picBoxCheck8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.picBoxCheck8.Name = "picBoxCheck8";
-            this.picBoxCheck8.Size = new System.Drawing.Size(20, 20);
+            this.picBoxCheck8.Size = new System.Drawing.Size(23, 25);
             this.picBoxCheck8.TabIndex = 13;
             this.picBoxCheck8.TabStop = false;
             // 
@@ -589,9 +606,10 @@
             this.picBoxCheck9.BackColor = System.Drawing.SystemColors.Window;
             this.picBoxCheck9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxCheck9.BackgroundImage")));
             this.picBoxCheck9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picBoxCheck9.Location = new System.Drawing.Point(179, 308);
+            this.picBoxCheck9.Location = new System.Drawing.Point(205, 385);
+            this.picBoxCheck9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.picBoxCheck9.Name = "picBoxCheck9";
-            this.picBoxCheck9.Size = new System.Drawing.Size(20, 20);
+            this.picBoxCheck9.Size = new System.Drawing.Size(23, 25);
             this.picBoxCheck9.TabIndex = 13;
             this.picBoxCheck9.TabStop = false;
             // 
@@ -600,9 +618,10 @@
             this.picBoxCheck10.BackColor = System.Drawing.SystemColors.Window;
             this.picBoxCheck10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxCheck10.BackgroundImage")));
             this.picBoxCheck10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picBoxCheck10.Location = new System.Drawing.Point(205, 339);
+            this.picBoxCheck10.Location = new System.Drawing.Point(234, 424);
+            this.picBoxCheck10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.picBoxCheck10.Name = "picBoxCheck10";
-            this.picBoxCheck10.Size = new System.Drawing.Size(20, 20);
+            this.picBoxCheck10.Size = new System.Drawing.Size(23, 25);
             this.picBoxCheck10.TabIndex = 13;
             this.picBoxCheck10.TabStop = false;
             // 
@@ -611,9 +630,10 @@
             this.picBoxCheck11.BackColor = System.Drawing.SystemColors.Window;
             this.picBoxCheck11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxCheck11.BackgroundImage")));
             this.picBoxCheck11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picBoxCheck11.Location = new System.Drawing.Point(205, 425);
+            this.picBoxCheck11.Location = new System.Drawing.Point(234, 531);
+            this.picBoxCheck11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.picBoxCheck11.Name = "picBoxCheck11";
-            this.picBoxCheck11.Size = new System.Drawing.Size(20, 20);
+            this.picBoxCheck11.Size = new System.Drawing.Size(23, 25);
             this.picBoxCheck11.TabIndex = 13;
             this.picBoxCheck11.TabStop = false;
             // 
@@ -622,9 +642,10 @@
             this.picBoxCheck13.BackColor = System.Drawing.SystemColors.Window;
             this.picBoxCheck13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxCheck13.BackgroundImage")));
             this.picBoxCheck13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picBoxCheck13.Location = new System.Drawing.Point(233, 541);
+            this.picBoxCheck13.Location = new System.Drawing.Point(266, 676);
+            this.picBoxCheck13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.picBoxCheck13.Name = "picBoxCheck13";
-            this.picBoxCheck13.Size = new System.Drawing.Size(20, 20);
+            this.picBoxCheck13.Size = new System.Drawing.Size(23, 25);
             this.picBoxCheck13.TabIndex = 13;
             this.picBoxCheck13.TabStop = false;
             // 
@@ -633,9 +654,10 @@
             this.picBoxCheck12.BackColor = System.Drawing.SystemColors.Window;
             this.picBoxCheck12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxCheck12.BackgroundImage")));
             this.picBoxCheck12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picBoxCheck12.Location = new System.Drawing.Point(218, 510);
+            this.picBoxCheck12.Location = new System.Drawing.Point(249, 638);
+            this.picBoxCheck12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.picBoxCheck12.Name = "picBoxCheck12";
-            this.picBoxCheck12.Size = new System.Drawing.Size(20, 20);
+            this.picBoxCheck12.Size = new System.Drawing.Size(23, 25);
             this.picBoxCheck12.TabIndex = 13;
             this.picBoxCheck12.TabStop = false;
             // 
@@ -644,9 +666,10 @@
             this.picBoxCheck4.BackColor = System.Drawing.SystemColors.Window;
             this.picBoxCheck4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxCheck4.BackgroundImage")));
             this.picBoxCheck4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picBoxCheck4.Location = new System.Drawing.Point(179, 164);
+            this.picBoxCheck4.Location = new System.Drawing.Point(205, 205);
+            this.picBoxCheck4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.picBoxCheck4.Name = "picBoxCheck4";
-            this.picBoxCheck4.Size = new System.Drawing.Size(20, 20);
+            this.picBoxCheck4.Size = new System.Drawing.Size(23, 25);
             this.picBoxCheck4.TabIndex = 13;
             this.picBoxCheck4.TabStop = false;
             // 
@@ -655,9 +678,10 @@
             this.picBoxCheck3.BackColor = System.Drawing.SystemColors.Window;
             this.picBoxCheck3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxCheck3.BackgroundImage")));
             this.picBoxCheck3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picBoxCheck3.Location = new System.Drawing.Point(198, 141);
+            this.picBoxCheck3.Location = new System.Drawing.Point(226, 176);
+            this.picBoxCheck3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.picBoxCheck3.Name = "picBoxCheck3";
-            this.picBoxCheck3.Size = new System.Drawing.Size(20, 20);
+            this.picBoxCheck3.Size = new System.Drawing.Size(23, 25);
             this.picBoxCheck3.TabIndex = 13;
             this.picBoxCheck3.TabStop = false;
             // 
@@ -667,11 +691,13 @@
             this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.GridColor = System.Drawing.SystemColors.Window;
-            this.dataGridView2.Location = new System.Drawing.Point(319, 124);
+            this.dataGridView2.Location = new System.Drawing.Point(365, 257);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView2.MultiSelect = false;
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 23;
-            this.dataGridView2.Size = new System.Drawing.Size(554, 335);
+            this.dataGridView2.Size = new System.Drawing.Size(633, 419);
             this.dataGridView2.TabIndex = 7;
             this.dataGridView2.Visible = false;
             // 
@@ -680,9 +706,9 @@
             this.LblMemDel1.AutoSize = true;
             this.LblMemDel1.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LblMemDel1.ForeColor = System.Drawing.SystemColors.Window;
-            this.LblMemDel1.Location = new System.Drawing.Point(328, 85);
+            this.LblMemDel1.Location = new System.Drawing.Point(375, 106);
             this.LblMemDel1.Name = "LblMemDel1";
-            this.LblMemDel1.Size = new System.Drawing.Size(106, 21);
+            this.LblMemDel1.Size = new System.Drawing.Size(134, 27);
             this.LblMemDel1.TabIndex = 14;
             this.LblMemDel1.Text = "회원 삭제";
             // 
@@ -692,9 +718,9 @@
             this.Lblmember1.BackColor = System.Drawing.Color.DarkBlue;
             this.Lblmember1.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Lblmember1.ForeColor = System.Drawing.SystemColors.Window;
-            this.Lblmember1.Location = new System.Drawing.Point(328, 85);
+            this.Lblmember1.Location = new System.Drawing.Point(375, 106);
             this.Lblmember1.Name = "Lblmember1";
-            this.Lblmember1.Size = new System.Drawing.Size(106, 21);
+            this.Lblmember1.Size = new System.Drawing.Size(134, 27);
             this.Lblmember1.TabIndex = 14;
             this.Lblmember1.Text = "회원 관리";
             // 
@@ -703,9 +729,9 @@
             this.LblPdOrder1.AutoSize = true;
             this.LblPdOrder1.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LblPdOrder1.ForeColor = System.Drawing.SystemColors.Window;
-            this.LblPdOrder1.Location = new System.Drawing.Point(328, 85);
+            this.LblPdOrder1.Location = new System.Drawing.Point(375, 106);
             this.LblPdOrder1.Name = "LblPdOrder1";
-            this.LblPdOrder1.Size = new System.Drawing.Size(106, 21);
+            this.LblPdOrder1.Size = new System.Drawing.Size(134, 27);
             this.LblPdOrder1.TabIndex = 14;
             this.LblPdOrder1.Text = "상품 주문";
             // 
@@ -714,9 +740,9 @@
             this.LblPdRegi1.AutoSize = true;
             this.LblPdRegi1.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LblPdRegi1.ForeColor = System.Drawing.SystemColors.Window;
-            this.LblPdRegi1.Location = new System.Drawing.Point(328, 85);
+            this.LblPdRegi1.Location = new System.Drawing.Point(375, 106);
             this.LblPdRegi1.Name = "LblPdRegi1";
-            this.LblPdRegi1.Size = new System.Drawing.Size(106, 21);
+            this.LblPdRegi1.Size = new System.Drawing.Size(134, 27);
             this.LblPdRegi1.TabIndex = 14;
             this.LblPdRegi1.Text = "상품 등록";
             // 
@@ -725,9 +751,9 @@
             this.LblPdDel1.AutoSize = true;
             this.LblPdDel1.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LblPdDel1.ForeColor = System.Drawing.SystemColors.Window;
-            this.LblPdDel1.Location = new System.Drawing.Point(328, 83);
+            this.LblPdDel1.Location = new System.Drawing.Point(375, 104);
             this.LblPdDel1.Name = "LblPdDel1";
-            this.LblPdDel1.Size = new System.Drawing.Size(106, 21);
+            this.LblPdDel1.Size = new System.Drawing.Size(134, 27);
             this.LblPdDel1.TabIndex = 14;
             this.LblPdDel1.Text = "상품 삭제";
             // 
@@ -736,9 +762,9 @@
             this.LblPriceMdfy1.AutoSize = true;
             this.LblPriceMdfy1.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LblPriceMdfy1.ForeColor = System.Drawing.SystemColors.Window;
-            this.LblPriceMdfy1.Location = new System.Drawing.Point(328, 85);
+            this.LblPriceMdfy1.Location = new System.Drawing.Point(375, 106);
             this.LblPriceMdfy1.Name = "LblPriceMdfy1";
-            this.LblPriceMdfy1.Size = new System.Drawing.Size(106, 21);
+            this.LblPriceMdfy1.Size = new System.Drawing.Size(134, 27);
             this.LblPriceMdfy1.TabIndex = 14;
             this.LblPriceMdfy1.Text = "가격 수정";
             // 
@@ -747,9 +773,9 @@
             this.LblPdInbound1.AutoSize = true;
             this.LblPdInbound1.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LblPdInbound1.ForeColor = System.Drawing.SystemColors.Window;
-            this.LblPdInbound1.Location = new System.Drawing.Point(328, 85);
+            this.LblPdInbound1.Location = new System.Drawing.Point(375, 106);
             this.LblPdInbound1.Name = "LblPdInbound1";
-            this.LblPdInbound1.Size = new System.Drawing.Size(158, 21);
+            this.LblPdInbound1.Size = new System.Drawing.Size(200, 27);
             this.LblPdInbound1.TabIndex = 14;
             this.LblPdInbound1.Text = "상품 입고 내역";
             // 
@@ -758,9 +784,9 @@
             this.LblSaleChart1.AutoSize = true;
             this.LblSaleChart1.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LblSaleChart1.ForeColor = System.Drawing.SystemColors.Window;
-            this.LblSaleChart1.Location = new System.Drawing.Point(328, 85);
+            this.LblSaleChart1.Location = new System.Drawing.Point(375, 106);
             this.LblSaleChart1.Name = "LblSaleChart1";
-            this.LblSaleChart1.Size = new System.Drawing.Size(172, 21);
+            this.LblSaleChart1.Size = new System.Drawing.Size(218, 27);
             this.LblSaleChart1.TabIndex = 14;
             this.LblSaleChart1.Text = "총매출액 그래프";
             // 
@@ -769,9 +795,9 @@
             this.LblProdChart1.AutoSize = true;
             this.LblProdChart1.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LblProdChart1.ForeColor = System.Drawing.SystemColors.Window;
-            this.LblProdChart1.Location = new System.Drawing.Point(328, 85);
+            this.LblProdChart1.Location = new System.Drawing.Point(375, 106);
             this.LblProdChart1.Name = "LblProdChart1";
-            this.LblProdChart1.Size = new System.Drawing.Size(202, 21);
+            this.LblProdChart1.Size = new System.Drawing.Size(256, 27);
             this.LblProdChart1.TabIndex = 14;
             this.LblProdChart1.Text = "상품별 판매 그래프";
             // 
@@ -780,9 +806,9 @@
             this.LblPdOutbound1.AutoSize = true;
             this.LblPdOutbound1.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LblPdOutbound1.ForeColor = System.Drawing.SystemColors.Window;
-            this.LblPdOutbound1.Location = new System.Drawing.Point(328, 85);
+            this.LblPdOutbound1.Location = new System.Drawing.Point(375, 106);
             this.LblPdOutbound1.Name = "LblPdOutbound1";
-            this.LblPdOutbound1.Size = new System.Drawing.Size(158, 21);
+            this.LblPdOutbound1.Size = new System.Drawing.Size(200, 27);
             this.LblPdOutbound1.TabIndex = 14;
             this.LblPdOutbound1.Text = "상품 출고 내역";
             // 
@@ -792,18 +818,18 @@
             this.LblProduct1.BackColor = System.Drawing.Color.DarkBlue;
             this.LblProduct1.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LblProduct1.ForeColor = System.Drawing.SystemColors.Window;
-            this.LblProduct1.Location = new System.Drawing.Point(328, 85);
+            this.LblProduct1.Location = new System.Drawing.Point(375, 106);
             this.LblProduct1.Name = "LblProduct1";
-            this.LblProduct1.Size = new System.Drawing.Size(106, 21);
+            this.LblProduct1.Size = new System.Drawing.Size(134, 27);
             this.LblProduct1.TabIndex = 14;
             this.LblProduct1.Text = "상품 관리";
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkBlue;
-            this.ClientSize = new System.Drawing.Size(966, 608);
+            this.ClientSize = new System.Drawing.Size(1104, 760);
             this.Controls.Add(this.LblProduct1);
             this.Controls.Add(this.Lblmember1);
             this.Controls.Add(this.LblProdChart1);
@@ -861,6 +887,7 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.ForeColor = System.Drawing.Color.Black;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ADMINISTRATOR";
