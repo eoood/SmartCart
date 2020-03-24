@@ -224,8 +224,6 @@ namespace smartcart
             picBoxCheck11.Visible = false;
             picBoxCheck12.Visible = false;
             picBoxCheck13.Visible = false;
-
-            picBoxCheck1.Visible = false;
         }
         
         //회원 삭제 라벨 클릭 시 
