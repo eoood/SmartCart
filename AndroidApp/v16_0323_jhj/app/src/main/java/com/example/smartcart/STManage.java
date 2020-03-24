@@ -80,12 +80,6 @@ public class STManage extends AppCompatActivity {
         }catch (Exception e){
             e.printStackTrace();
         }
-        /*
-        userList.add(new User("혁진","바보","ㄱㄷ","20"));
-        userList.add(new User("혁진","바보","ㄱㄷ","20"));
-        userList.add(new User("혁진","바보","ㄱㄷ","20"));
-*/
-
     }
     class BackgroundTask extends AsyncTask<Void, Void, String> {
         String target;
