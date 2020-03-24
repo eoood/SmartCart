@@ -14,12 +14,12 @@ namespace smartcart
     public partial class Main : Form
     {
         Login loginForm;
-        Con_datatable db;
+        //Con_datatable db;
         public Main()
         {
             InitializeComponent();
-            db = new Con_datatable();
-            db.ConnectDB();
+            //db = new Con_datatable();
+            //db.ConnectDB();
         }
 
         private void Main_Load(object sender, EventArgs e)
@@ -49,9 +49,9 @@ namespace smartcart
             }
 
             //DataGridView1에 Cart 실시간 현황 테이블 생성
-            string sql = "SELECT * FROM `cart`";
-            DataTable dt = db.GetDBTable(sql);
-            dataGridView1.DataSource = dt;
+            //string sql = "SELECT * FROM `cart`";
+            //DataTable dt = db.GetDBTable(sql);
+            //dataGridView1.DataSource = dt;
 
         }
 
