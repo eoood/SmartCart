@@ -106,8 +106,8 @@ namespace Smartcart
             textMemPhone.Visible = false;
             textMemPassword.Visible = false;
             pictureBox4.Visible = false;
+            LblMemManage.Visible = false;
 
-            
         }
 
         //메인 메뉴 버튼 기본이미지로 색깔 초기화
@@ -157,7 +157,30 @@ namespace Smartcart
             //DataGridView1에 Cart 실시간 현황 테이블 생성
             string sql = "SELECT * FROM `cart`";
             DataTable dt = db.GetDBTable(sql);
-            dataGridView1.DataSource = dt;
+
+            //헤더 텍스트 가운데 정렬
+            dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            //데이터 출력 셀 가운데 정렬
+            dataGridView1.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            //행, 열 색깔 바꾸기
+            dataGridView1.EnableHeadersVisualStyles = false;
+
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.CornflowerBlue;
+            dataGridView1.RowHeadersDefaultCellStyle.BackColor = Color.LightSteelBlue;
+
+            
+        
+            //dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+           // dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+
+
+
+
+
+
+
+
         }
 
         private void btnMember_Click(object sender, EventArgs e)
@@ -173,7 +196,7 @@ namespace Smartcart
             dataGridView1.Visible = false;
             dataGridView2.Visible = true;
             btnMember.BackgroundImage = Image.FromFile("menuMem2.jpg");
-
+            LblMemManage.Visible = true;
             //DataGridView2에 사용자 테이블 생성
             string sql = "SELECT * FROM `user`";
             DataTable dt = db.GetDBTable(sql);
@@ -284,6 +307,7 @@ namespace Smartcart
             textMemPhone.Visible = true;
             textMemPassword.Visible = true;
             pictureBox4.Visible = true;
+            LblMemManage.Visible = true;
         }
 
         private void LblPdOrder_Click(object sender, EventArgs e)
@@ -431,6 +455,46 @@ namespace Smartcart
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void LblUsingUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picBoxCheck1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblCart_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picBoxCheck4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picBoxCheck2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblNowDate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

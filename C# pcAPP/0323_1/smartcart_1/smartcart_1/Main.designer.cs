@@ -97,7 +97,7 @@
             this.btnCart.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnCart.ForeColor = System.Drawing.SystemColors.Window;
             this.btnCart.Location = new System.Drawing.Point(25, 76);
-            this.btnCart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCart.Margin = new System.Windows.Forms.Padding(4);
             this.btnCart.Name = "btnCart";
             this.btnCart.Size = new System.Drawing.Size(324, 68);
             this.btnCart.TabIndex = 1;
@@ -114,7 +114,7 @@
             this.btnMember.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnMember.ForeColor = System.Drawing.SystemColors.Window;
             this.btnMember.Location = new System.Drawing.Point(356, 76);
-            this.btnMember.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMember.Margin = new System.Windows.Forms.Padding(4);
             this.btnMember.Name = "btnMember";
             this.btnMember.Size = new System.Drawing.Size(181, 68);
             this.btnMember.TabIndex = 1;
@@ -131,7 +131,7 @@
             this.btnProduct.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnProduct.ForeColor = System.Drawing.SystemColors.Window;
             this.btnProduct.Location = new System.Drawing.Point(545, 76);
-            this.btnProduct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnProduct.Margin = new System.Windows.Forms.Padding(4);
             this.btnProduct.Name = "btnProduct";
             this.btnProduct.Size = new System.Drawing.Size(181, 68);
             this.btnProduct.TabIndex = 1;
@@ -148,7 +148,7 @@
             this.btnSales.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnSales.ForeColor = System.Drawing.SystemColors.Window;
             this.btnSales.Location = new System.Drawing.Point(1115, 76);
-            this.btnSales.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSales.Margin = new System.Windows.Forms.Padding(4);
             this.btnSales.Name = "btnSales";
             this.btnSales.Size = new System.Drawing.Size(266, 68);
             this.btnSales.TabIndex = 1;
@@ -164,7 +164,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.Location = new System.Drawing.Point(25, 169);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 27;
@@ -181,7 +181,7 @@
             this.btnPdOrder.Font = new System.Drawing.Font("굴림", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnPdOrder.ForeColor = System.Drawing.SystemColors.Window;
             this.btnPdOrder.Location = new System.Drawing.Point(29, 746);
-            this.btnPdOrder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPdOrder.Margin = new System.Windows.Forms.Padding(4);
             this.btnPdOrder.Name = "btnPdOrder";
             this.btnPdOrder.Size = new System.Drawing.Size(169, 52);
             this.btnPdOrder.TabIndex = 3;
@@ -198,7 +198,7 @@
             this.btnPdDel.Font = new System.Drawing.Font("굴림", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnPdDel.ForeColor = System.Drawing.SystemColors.Window;
             this.btnPdDel.Location = new System.Drawing.Point(384, 734);
-            this.btnPdDel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPdDel.Margin = new System.Windows.Forms.Padding(4);
             this.btnPdDel.Name = "btnPdDel";
             this.btnPdDel.Size = new System.Drawing.Size(172, 52);
             this.btnPdDel.TabIndex = 3;
@@ -215,7 +215,7 @@
             this.btnPdMdfy.Font = new System.Drawing.Font("굴림", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnPdMdfy.ForeColor = System.Drawing.SystemColors.Window;
             this.btnPdMdfy.Location = new System.Drawing.Point(205, 746);
-            this.btnPdMdfy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPdMdfy.Margin = new System.Windows.Forms.Padding(4);
             this.btnPdMdfy.Name = "btnPdMdfy";
             this.btnPdMdfy.Size = new System.Drawing.Size(172, 52);
             this.btnPdMdfy.TabIndex = 3;
@@ -231,7 +231,7 @@
             legend1.Name = "Legend1";
             this.chartSales.Legends.Add(legend1);
             this.chartSales.Location = new System.Drawing.Point(25, 446);
-            this.chartSales.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chartSales.Margin = new System.Windows.Forms.Padding(4);
             this.chartSales.Name = "chartSales";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
@@ -252,7 +252,7 @@
             // 
             this.dateTimePicker1.CustomFormat = "";
             this.dateTimePicker1.Location = new System.Drawing.Point(1099, 766);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(267, 28);
             this.dateTimePicker1.TabIndex = 5;
@@ -265,7 +265,7 @@
             this.btnPdChart.Font = new System.Drawing.Font("굴림", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnPdChart.ForeColor = System.Drawing.SystemColors.Window;
             this.btnPdChart.Location = new System.Drawing.Point(649, 766);
-            this.btnPdChart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPdChart.Margin = new System.Windows.Forms.Padding(4);
             this.btnPdChart.Name = "btnPdChart";
             this.btnPdChart.Size = new System.Drawing.Size(310, 52);
             this.btnPdChart.TabIndex = 3;
@@ -283,7 +283,7 @@
             this.btnSalesChart.Font = new System.Drawing.Font("굴림", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnSalesChart.ForeColor = System.Drawing.SystemColors.Window;
             this.btnSalesChart.Location = new System.Drawing.Point(966, 746);
-            this.btnSalesChart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSalesChart.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalesChart.Name = "btnSalesChart";
             this.btnSalesChart.Size = new System.Drawing.Size(274, 52);
             this.btnSalesChart.TabIndex = 3;
@@ -299,7 +299,7 @@
             legend2.Name = "Legend1";
             this.chartSales2.Legends.Add(legend2);
             this.chartSales2.Location = new System.Drawing.Point(665, 320);
-            this.chartSales2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chartSales2.Margin = new System.Windows.Forms.Padding(4);
             this.chartSales2.Name = "chartSales2";
             this.chartSales2.Size = new System.Drawing.Size(605, 391);
             this.chartSales2.TabIndex = 6;
@@ -319,7 +319,7 @@
             this.btnLogout.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnLogout.ForeColor = System.Drawing.SystemColors.Window;
             this.btnLogout.Location = new System.Drawing.Point(1247, 719);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(120, 40);
             this.btnLogout.TabIndex = 7;
@@ -348,7 +348,7 @@
             this.btnMemDel.Font = new System.Drawing.Font("굴림", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnMemDel.ForeColor = System.Drawing.SystemColors.Window;
             this.btnMemDel.Location = new System.Drawing.Point(29, 787);
-            this.btnMemDel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMemDel.Margin = new System.Windows.Forms.Padding(4);
             this.btnMemDel.Name = "btnMemDel";
             this.btnMemDel.Size = new System.Drawing.Size(172, 52);
             this.btnMemDel.TabIndex = 3;
@@ -361,7 +361,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pictureBox1.Location = new System.Drawing.Point(-2, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1412, 154);
             this.pictureBox1.TabIndex = 9;
@@ -375,7 +375,7 @@
             this.btnIB.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnIB.ForeColor = System.Drawing.SystemColors.Window;
             this.btnIB.Location = new System.Drawing.Point(924, 76);
-            this.btnIB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIB.Margin = new System.Windows.Forms.Padding(4);
             this.btnIB.Name = "btnIB";
             this.btnIB.Size = new System.Drawing.Size(181, 68);
             this.btnIB.TabIndex = 10;
@@ -391,7 +391,7 @@
             this.btnOB.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnOB.ForeColor = System.Drawing.SystemColors.Window;
             this.btnOB.Location = new System.Drawing.Point(734, 76);
-            this.btnOB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOB.Margin = new System.Windows.Forms.Padding(4);
             this.btnOB.Name = "btnOB";
             this.btnOB.Size = new System.Drawing.Size(181, 68);
             this.btnOB.TabIndex = 10;
@@ -407,7 +407,7 @@
             this.btnPdRegi.Font = new System.Drawing.Font("굴림", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnPdRegi.ForeColor = System.Drawing.SystemColors.Window;
             this.btnPdRegi.Location = new System.Drawing.Point(563, 744);
-            this.btnPdRegi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPdRegi.Margin = new System.Windows.Forms.Padding(4);
             this.btnPdRegi.Name = "btnPdRegi";
             this.btnPdRegi.Size = new System.Drawing.Size(172, 52);
             this.btnPdRegi.TabIndex = 11;
@@ -424,7 +424,7 @@
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.GridColor = System.Drawing.SystemColors.Control;
             this.dataGridView2.Location = new System.Drawing.Point(713, 181);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 27;
@@ -451,7 +451,7 @@
             this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Location = new System.Drawing.Point(713, 181);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 51;
             this.dataGridView3.RowTemplate.Height = 27;
@@ -467,7 +467,7 @@
             this.btnChartDate.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnChartDate.ForeColor = System.Drawing.SystemColors.Window;
             this.btnChartDate.Location = new System.Drawing.Point(448, 697);
-            this.btnChartDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnChartDate.Margin = new System.Windows.Forms.Padding(4);
             this.btnChartDate.Name = "btnChartDate";
             this.btnChartDate.Size = new System.Drawing.Size(90, 30);
             this.btnChartDate.TabIndex = 16;
@@ -481,7 +481,7 @@
             this.firstDTP.CustomFormat = "yyyy/MM/dd";
             this.firstDTP.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.firstDTP.Location = new System.Drawing.Point(29, 697);
-            this.firstDTP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.firstDTP.Margin = new System.Windows.Forms.Padding(4);
             this.firstDTP.Name = "firstDTP";
             this.firstDTP.Size = new System.Drawing.Size(162, 28);
             this.firstDTP.TabIndex = 17;
@@ -493,7 +493,7 @@
             this.lastDTP.CustomFormat = "yyyy/MM/dd";
             this.lastDTP.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.lastDTP.Location = new System.Drawing.Point(258, 697);
-            this.lastDTP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lastDTP.Margin = new System.Windows.Forms.Padding(4);
             this.lastDTP.Name = "lastDTP";
             this.lastDTP.Size = new System.Drawing.Size(162, 28);
             this.lastDTP.TabIndex = 18;
@@ -504,7 +504,7 @@
             this.firstDTP2.CustomFormat = "yyyy/MM/dd";
             this.firstDTP2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.firstDTP2.Location = new System.Drawing.Point(29, 697);
-            this.firstDTP2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.firstDTP2.Margin = new System.Windows.Forms.Padding(4);
             this.firstDTP2.Name = "firstDTP2";
             this.firstDTP2.Size = new System.Drawing.Size(162, 28);
             this.firstDTP2.TabIndex = 19;
@@ -515,7 +515,7 @@
             this.lastDTP2.CustomFormat = "yyyy/MM/dd";
             this.lastDTP2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.lastDTP2.Location = new System.Drawing.Point(258, 697);
-            this.lastDTP2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lastDTP2.Margin = new System.Windows.Forms.Padding(4);
             this.lastDTP2.Name = "lastDTP2";
             this.lastDTP2.Size = new System.Drawing.Size(162, 28);
             this.lastDTP2.TabIndex = 20;
@@ -529,7 +529,7 @@
             this.btnChartDate2.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnChartDate2.ForeColor = System.Drawing.SystemColors.Window;
             this.btnChartDate2.Location = new System.Drawing.Point(448, 698);
-            this.btnChartDate2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnChartDate2.Margin = new System.Windows.Forms.Padding(4);
             this.btnChartDate2.Name = "btnChartDate2";
             this.btnChartDate2.Size = new System.Drawing.Size(90, 28);
             this.btnChartDate2.TabIndex = 21;
@@ -576,7 +576,7 @@
             this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.dataGridView2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
