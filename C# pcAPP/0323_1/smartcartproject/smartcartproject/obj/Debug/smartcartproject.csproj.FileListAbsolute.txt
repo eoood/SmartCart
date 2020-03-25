@@ -31,3 +31,10 @@ C:\Users\한용구\Desktop\smartcartproject\smartcartproject\obj\Debug\smartcart
 C:\Users\한용구\Desktop\smartcartproject\smartcartproject\obj\Debug\smartcartproject.csproj.GenerateResource.Cache
 C:\Users\한용구\Desktop\smartcartproject\smartcartproject\obj\Debug\smartcartproject.Main.resources
 C:\Users\한용구\Desktop\smartcartproject\smartcartproject\obj\Debug\smartcartproject.Login.resources
+D:\songchanho\SmartCart\C# pcAPP\0323_1\smartcartproject\smartcartproject\obj\Debug\smartcartproject.csprojAssemblyReference.cache
+D:\songchanho\SmartCart\C# pcAPP\0323_1\smartcartproject\smartcartproject\obj\Debug\smartcartproject.Main.resources
+D:\songchanho\SmartCart\C# pcAPP\0323_1\smartcartproject\smartcartproject\obj\Debug\smartcartproject.Login.resources
+D:\songchanho\SmartCart\C# pcAPP\0323_1\smartcartproject\smartcartproject\obj\Debug\smartcartproject.Properties.Resources.resources
+D:\songchanho\SmartCart\C# pcAPP\0323_1\smartcartproject\smartcartproject\obj\Debug\smartcartproject.csproj.GenerateResource.cache
+D:\songchanho\SmartCart\C# pcAPP\0323_1\smartcartproject\smartcartproject\obj\Debug\smartcartproject.exe
+D:\songchanho\SmartCart\C# pcAPP\0323_1\smartcartproject\smartcartproject\obj\Debug\smartcartproject.pdb
