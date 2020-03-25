@@ -122,176 +122,176 @@ namespace smartcart_1
 
             ArrayList chartpdsale2 = new ArrayList();
             //상품판매액
-            string Querysale1 = "select name from `product`";
-            //select count(product) from `order` where product = 'mask' and buydate between date('2020-03-11') and date('2020-03-13') group by buydate
-            MySqlConnection consaleDB1 = new MySqlConnection(constring);
-            MySqlCommand cmdsaleDB1 = new MySqlCommand(Querysale1, consaleDB1);
-            MySqlDataReader myreadersale1;
-            try
-            {
-                consaleDB1.Open();
-                myreadersale1 = cmdsaleDB1.ExecuteReader();
-                while (myreadersale1.Read())
-                {
-                    string sName = myreadersale1.GetString("name");
-                    chartpdsale2.Add(sName);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            //chartSales2.Series[0].Points.Clear();
-            //chartSales2.Series[1].Points.Clear();
-            //chartSales2.Series[2].Points.Clear();
-            //chartSales2.Series[3].Points.Clear();
-            //chartSales2.Series[4].Points.Clear();
-            //chartSales2.Series[5].Points.Clear();
-            //chartSales2.Series[6].Points.Clear();
+            //string Querysale1 = "select name from `product`";
+            ////select count(product) from `order` where product = 'mask' and buydate between date('2020-03-11') and date('2020-03-13') group by buydate
+            //MySqlConnection consaleDB1 = new MySqlConnection(constring);
+            //MySqlCommand cmdsaleDB1 = new MySqlCommand(Querysale1, consaleDB1);
+            //MySqlDataReader myreadersale1;
+            //try
+            //{
+            //    consaleDB1.Open();
+            //    myreadersale1 = cmdsaleDB1.ExecuteReader();
+            //    while (myreadersale1.Read())
+            //    {
+            //        string sName = myreadersale1.GetString("name");
+            //        chartpdsale2.Add(sName);
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
+            ////chartSales2.Series[0].Points.Clear();
+            ////chartSales2.Series[1].Points.Clear();
+            ////chartSales2.Series[2].Points.Clear();
+            ////chartSales2.Series[3].Points.Clear();
+            ////chartSales2.Series[4].Points.Clear();
+            ////chartSales2.Series[5].Points.Clear();
+            ////chartSales2.Series[6].Points.Clear();
 
-            chartSales2.Series.Clear();
-            Series series1 = chartSales2.Series.Add((string)chartpdsale2[0]);
-            Series series2 = chartSales2.Series.Add((string)chartpdsale2[1]);
-            Series series3 = chartSales2.Series.Add((string)chartpdsale2[2]);
-            Series series4 = chartSales2.Series.Add((string)chartpdsale2[3]);
-            Series series5 = chartSales2.Series.Add((string)chartpdsale2[4]);
-            Series series6 = chartSales2.Series.Add((string)chartpdsale2[5]);
-            Series series7 = chartSales2.Series.Add((string)chartpdsale2[6]);
+            //chartSales2.Series.Clear();
+            //Series series1 = chartSales2.Series.Add((string)chartpdsale2[0]);
+            //Series series2 = chartSales2.Series.Add((string)chartpdsale2[1]);
+            //Series series3 = chartSales2.Series.Add((string)chartpdsale2[2]);
+            //Series series4 = chartSales2.Series.Add((string)chartpdsale2[3]);
+            //Series series5 = chartSales2.Series.Add((string)chartpdsale2[4]);
+            //Series series6 = chartSales2.Series.Add((string)chartpdsale2[5]);
+            //Series series7 = chartSales2.Series.Add((string)chartpdsale2[6]);
             
-            string Query0 = "select date_format(buydate, '%m-%d') as date, count(product) from `order` where product = '" + chartpdsale2[0] + "' and buydate between date('" + firstyear2 + "-" + firstmonth2 +"-" + firstday2 + "') and date('" + lastyear2 + "-" + lastmonth2 + "-" + lastday2 + "') group by buydate";
-            MySqlConnection conDB0 = new MySqlConnection(constring);
-            MySqlCommand cmdDB0 = new MySqlCommand((string)Query0, conDB0);
-            MySqlDataReader myreader0;
-            try
-            {
-                conDB0.Open();
-                myreader0 = cmdDB0.ExecuteReader();
-                while (myreader0.Read())
-                {   
-                    string sCount = myreader0.GetString("count(product)");
-                    string sDay = myreader0.GetString("date");
-                    chartSales2.Series[(string)chartpdsale2[0]].Points.AddXY(sDay, sCount);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + "00");
-            }
+            //string Query0 = "select date_format(buydate, '%m-%d') as date, count(product) from `order` where product = '" + chartpdsale2[0] + "' and buydate between date('" + firstyear2 + "-" + firstmonth2 +"-" + firstday2 + "') and date('" + lastyear2 + "-" + lastmonth2 + "-" + lastday2 + "') group by buydate";
+            //MySqlConnection conDB0 = new MySqlConnection(constring);
+            //MySqlCommand cmdDB0 = new MySqlCommand((string)Query0, conDB0);
+            //MySqlDataReader myreader0;
+            //try
+            //{
+            //    conDB0.Open();
+            //    myreader0 = cmdDB0.ExecuteReader();
+            //    while (myreader0.Read())
+            //    {   
+            //        string sCount = myreader0.GetString("count(product)");
+            //        string sDay = myreader0.GetString("date");
+            //        chartSales2.Series[(string)chartpdsale2[0]].Points.AddXY(sDay, sCount);
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message + "00");
+            //}
 
-            string Query1 = "select date_format(buydate, '%m-%d') as date, count(product) from `order` where product = '" + chartpdsale2[1] + "' and buydate between date('" + firstyear2 + "-" + firstmonth2 + "-" + firstday2 + "') and date('" + lastyear2 + "-" + lastmonth2 + "-" + lastday2 + "') group by buydate";
-            MySqlConnection conDB1 = new MySqlConnection(constring);
-            MySqlCommand cmdDB1 = new MySqlCommand(Query1, conDB1);
-            MySqlDataReader myreader1;
-            try
-            {
-                conDB1.Open();
-                myreader1 = cmdDB1.ExecuteReader();
-                while (myreader1.Read())
-                {
-                    string sCount = myreader1.GetString("count(product)");
-                    string sDay = myreader1.GetString("date");
-                    chartSales2.Series[(string)chartpdsale2[1]].Points.AddXY(sDay, sCount);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + "11");
-            }
-            string Query2 = "select date_format(buydate, '%m-%d') as date, count(product) from `order` where product = '" + chartpdsale2[2] + "' and buydate between date('" + firstyear2 + "-" + firstmonth2 + "-" + firstday2 + "') and date('" + lastyear2 + "-" + lastmonth2 + "-" + lastday2 + "') group by buydate";
-            MySqlConnection conDB2 = new MySqlConnection(constring);
-            MySqlCommand cmdDB2 = new MySqlCommand(Query2, conDB2);
-            MySqlDataReader myreader2;
-            try
-            {
-                conDB2.Open();
-                myreader2 = cmdDB2.ExecuteReader();
-                while (myreader2.Read())
-                {
-                    string sCount = myreader2.GetString("count(product)");
-                    string sDay = myreader2.GetString("date");
-                    chartSales2.Series[(string)chartpdsale2[2]].Points.AddXY(sDay, sCount);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + "22");
-            }
-            string Query3 = "select date_format(buydate, '%m-%d') as date, count(product) from `order` where product = '" + chartpdsale2[3] + "' and buydate between date('" + firstyear2 + "-" + firstmonth2 + "-" + firstday2 + "') and date('" + lastyear2 + "-" + lastmonth2 + "-" + lastday2 + "') group by buydate";
-            MySqlConnection conDB3 = new MySqlConnection(constring);
-            MySqlCommand cmdDB3 = new MySqlCommand((string)Query3, conDB3);
-            MySqlDataReader myreader3;
-            try
-            {
-                conDB3.Open();
-                myreader3 = cmdDB3.ExecuteReader();
-                while (myreader3.Read())
-                {
-                    string sCount = myreader3.GetString("count(product)");
-                    string sDay = myreader3.GetString("date");
-                    chartSales2.Series[(string)chartpdsale2[3]].Points.AddXY(sDay, sCount);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + "33");
-            }
-            string Query4 = "select date_format(buydate, '%m-%d') as date, count(product) from `order` where product = '" + chartpdsale2[4] + "' and buydate between date('" + firstyear2 + "-" + firstmonth2 + "-" + firstday2 + "') and date('" + lastyear2 + "-" + lastmonth2 + "-" + lastday2 + "') group by buydate";
-            MySqlConnection conDB4 = new MySqlConnection(constring);
-            MySqlCommand cmdDB4 = new MySqlCommand(Query4, conDB4);
-            MySqlDataReader myreader4;
-            try
-            {
-                conDB4.Open();
-                myreader4 = cmdDB4.ExecuteReader();
-                while (myreader4.Read())
-                {
-                    string sCount = myreader4.GetString("count(product)");
-                    string sDay = myreader4.GetString("date");
-                    chartSales2.Series[(string)chartpdsale2[4]].Points.AddXY(sDay, sCount);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + "44");
-            }
-            string Query5 = "select date_format(buydate, '%m-%d') as date, count(product) from `order` where product = '" + chartpdsale2[5] + "' and buydate between date('" + firstyear2 + "-" + firstmonth2 + "-" + firstday2 + "') and date('" + lastyear2 + "-" + lastmonth2 + "-" + lastday2 + "') group by buydate";
-            MySqlConnection conDB5 = new MySqlConnection(constring);
-            MySqlCommand cmdDB5 = new MySqlCommand(Query5, conDB5);
-            MySqlDataReader myreader5;
-            try
-            {
-                conDB5.Open();
-                myreader5 = cmdDB5.ExecuteReader();
-                while (myreader5.Read())
-                {
-                    string sCount = myreader5.GetString("count(product)");
-                    string sDay = myreader5.GetString("date");
-                    chartSales2.Series[(string)chartpdsale2[5]].Points.AddXY(sDay, sCount);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + "55");
-            }
-            string Query6 = "select date_format(buydate, '%m-%d') as date, count(product) from `order` where product = '" + chartpdsale2[6] + "' and buydate between date('" + firstyear2 + "-" + firstmonth2 + "-" + firstday2 + "') and date('" + lastyear2 + "-" + lastmonth2 + "-" + lastday2 + "') group by buydate";
-            MySqlConnection conDB6 = new MySqlConnection(constring);
-            MySqlCommand cmdDB6 = new MySqlCommand(Query6, conDB6);
-            MySqlDataReader myreader6;
-            try
-            {
-                conDB6.Open();
-                myreader6 = cmdDB6.ExecuteReader();
-                while (myreader6.Read())
-                {
-                    string sCount = myreader6.GetString("count(product)");
-                    string sDay = myreader6.GetString("date");
-                    chartSales2.Series[(string)chartpdsale2[6]].Points.AddXY(sDay, sCount);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + "66");
-            }
+            //string Query1 = "select date_format(buydate, '%m-%d') as date, count(product) from `order` where product = '" + chartpdsale2[1] + "' and buydate between date('" + firstyear2 + "-" + firstmonth2 + "-" + firstday2 + "') and date('" + lastyear2 + "-" + lastmonth2 + "-" + lastday2 + "') group by buydate";
+            //MySqlConnection conDB1 = new MySqlConnection(constring);
+            //MySqlCommand cmdDB1 = new MySqlCommand(Query1, conDB1);
+            //MySqlDataReader myreader1;
+            //try
+            //{
+            //    conDB1.Open();
+            //    myreader1 = cmdDB1.ExecuteReader();
+            //    while (myreader1.Read())
+            //    {
+            //        string sCount = myreader1.GetString("count(product)");
+            //        string sDay = myreader1.GetString("date");
+            //        chartSales2.Series[(string)chartpdsale2[1]].Points.AddXY(sDay, sCount);
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message + "11");
+            //}
+            //string Query2 = "select date_format(buydate, '%m-%d') as date, count(product) from `order` where product = '" + chartpdsale2[2] + "' and buydate between date('" + firstyear2 + "-" + firstmonth2 + "-" + firstday2 + "') and date('" + lastyear2 + "-" + lastmonth2 + "-" + lastday2 + "') group by buydate";
+            //MySqlConnection conDB2 = new MySqlConnection(constring);
+            //MySqlCommand cmdDB2 = new MySqlCommand(Query2, conDB2);
+            //MySqlDataReader myreader2;
+            //try
+            //{
+            //    conDB2.Open();
+            //    myreader2 = cmdDB2.ExecuteReader();
+            //    while (myreader2.Read())
+            //    {
+            //        string sCount = myreader2.GetString("count(product)");
+            //        string sDay = myreader2.GetString("date");
+            //        chartSales2.Series[(string)chartpdsale2[2]].Points.AddXY(sDay, sCount);
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message + "22");
+            //}
+            //string Query3 = "select date_format(buydate, '%m-%d') as date, count(product) from `order` where product = '" + chartpdsale2[3] + "' and buydate between date('" + firstyear2 + "-" + firstmonth2 + "-" + firstday2 + "') and date('" + lastyear2 + "-" + lastmonth2 + "-" + lastday2 + "') group by buydate";
+            //MySqlConnection conDB3 = new MySqlConnection(constring);
+            //MySqlCommand cmdDB3 = new MySqlCommand((string)Query3, conDB3);
+            //MySqlDataReader myreader3;
+            //try
+            //{
+            //    conDB3.Open();
+            //    myreader3 = cmdDB3.ExecuteReader();
+            //    while (myreader3.Read())
+            //    {
+            //        string sCount = myreader3.GetString("count(product)");
+            //        string sDay = myreader3.GetString("date");
+            //        chartSales2.Series[(string)chartpdsale2[3]].Points.AddXY(sDay, sCount);
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message + "33");
+            //}
+            //string Query4 = "select date_format(buydate, '%m-%d') as date, count(product) from `order` where product = '" + chartpdsale2[4] + "' and buydate between date('" + firstyear2 + "-" + firstmonth2 + "-" + firstday2 + "') and date('" + lastyear2 + "-" + lastmonth2 + "-" + lastday2 + "') group by buydate";
+            //MySqlConnection conDB4 = new MySqlConnection(constring);
+            //MySqlCommand cmdDB4 = new MySqlCommand(Query4, conDB4);
+            //MySqlDataReader myreader4;
+            //try
+            //{
+            //    conDB4.Open();
+            //    myreader4 = cmdDB4.ExecuteReader();
+            //    while (myreader4.Read())
+            //    {
+            //        string sCount = myreader4.GetString("count(product)");
+            //        string sDay = myreader4.GetString("date");
+            //        chartSales2.Series[(string)chartpdsale2[4]].Points.AddXY(sDay, sCount);
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message + "44");
+            //}
+            //string Query5 = "select date_format(buydate, '%m-%d') as date, count(product) from `order` where product = '" + chartpdsale2[5] + "' and buydate between date('" + firstyear2 + "-" + firstmonth2 + "-" + firstday2 + "') and date('" + lastyear2 + "-" + lastmonth2 + "-" + lastday2 + "') group by buydate";
+            //MySqlConnection conDB5 = new MySqlConnection(constring);
+            //MySqlCommand cmdDB5 = new MySqlCommand(Query5, conDB5);
+            //MySqlDataReader myreader5;
+            //try
+            //{
+            //    conDB5.Open();
+            //    myreader5 = cmdDB5.ExecuteReader();
+            //    while (myreader5.Read())
+            //    {
+            //        string sCount = myreader5.GetString("count(product)");
+            //        string sDay = myreader5.GetString("date");
+            //        chartSales2.Series[(string)chartpdsale2[5]].Points.AddXY(sDay, sCount);
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message + "55");
+            //}
+            //string Query6 = "select date_format(buydate, '%m-%d') as date, count(product) from `order` where product = '" + chartpdsale2[6] + "' and buydate between date('" + firstyear2 + "-" + firstmonth2 + "-" + firstday2 + "') and date('" + lastyear2 + "-" + lastmonth2 + "-" + lastday2 + "') group by buydate";
+            //MySqlConnection conDB6 = new MySqlConnection(constring);
+            //MySqlCommand cmdDB6 = new MySqlCommand(Query6, conDB6);
+            //MySqlDataReader myreader6;
+            //try
+            //{
+            //    conDB6.Open();
+            //    myreader6 = cmdDB6.ExecuteReader();
+            //    while (myreader6.Read())
+            //    {
+            //        string sCount = myreader6.GetString("count(product)");
+            //        string sDay = myreader6.GetString("date");
+            //        chartSales2.Series[(string)chartpdsale2[6]].Points.AddXY(sDay, sCount);
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message + "66");
+            //}
 
             //버튼 배경색 지정
             btnCart.BackColor = Color.FromArgb(255, 192, 192);
@@ -561,13 +561,13 @@ namespace smartcart_1
             {
                 MessageBox.Show(ex.Message);
             }
-            //chartSales2.Series[0].Points.Clear();
-            //chartSales2.Series[1].Points.Clear();
-            //chartSales2.Series[2].Points.Clear();
-            //chartSales2.Series[3].Points.Clear();
-            //chartSales2.Series[4].Points.Clear();
-            //chartSales2.Series[5].Points.Clear();
-            //chartSales2.Series[6].Points.Clear();
+            chartSales2.Series[0].Points.Clear();
+            chartSales2.Series[1].Points.Clear();
+            chartSales2.Series[2].Points.Clear();
+            chartSales2.Series[3].Points.Clear();
+            chartSales2.Series[4].Points.Clear();
+            chartSales2.Series[5].Points.Clear();
+            chartSales2.Series[6].Points.Clear();
 
             chartSales2.Series.Clear();
             Series series1 = chartSales2.Series.Add((string)chartpdsale2[0]);

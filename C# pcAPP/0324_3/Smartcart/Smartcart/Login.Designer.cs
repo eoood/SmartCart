@@ -39,11 +39,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("굴림", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Font = new System.Drawing.Font("나눔스퀘어라운드 ExtraBold", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(223, 178);
+            this.label1.Location = new System.Drawing.Point(310, 218);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(658, 47);
+            this.label1.Size = new System.Drawing.Size(746, 62);
             this.label1.TabIndex = 1;
             this.label1.Text = "ICD SHOP ADMINISTRATOR";
             // 
@@ -54,10 +55,10 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(487, 447);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnLogin.Location = new System.Drawing.Point(609, 536);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(130, 46);
+            this.btnLogin.Size = new System.Drawing.Size(162, 55);
             this.btnLogin.TabIndex = 6;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -65,11 +66,11 @@
             // 
             // textPassword
             // 
-            this.textPassword.Location = new System.Drawing.Point(487, 398);
-            this.textPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textPassword.Location = new System.Drawing.Point(609, 478);
+            this.textPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textPassword.Name = "textPassword";
             this.textPassword.PasswordChar = '*';
-            this.textPassword.Size = new System.Drawing.Size(130, 25);
+            this.textPassword.Size = new System.Drawing.Size(162, 28);
             this.textPassword.TabIndex = 5;
             // 
             // LblPassword
@@ -77,18 +78,19 @@
             this.LblPassword.AutoSize = true;
             this.LblPassword.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LblPassword.ForeColor = System.Drawing.SystemColors.Window;
-            this.LblPassword.Location = new System.Drawing.Point(496, 354);
+            this.LblPassword.Location = new System.Drawing.Point(620, 425);
+            this.LblPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblPassword.Name = "LblPassword";
-            this.LblPassword.Size = new System.Drawing.Size(119, 24);
+            this.LblPassword.Size = new System.Drawing.Size(153, 29);
             this.LblPassword.TabIndex = 4;
             this.LblPassword.Text = "Password";
             // 
             // textUsername
             // 
-            this.textUsername.Location = new System.Drawing.Point(487, 307);
-            this.textUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textUsername.Location = new System.Drawing.Point(609, 368);
+            this.textUsername.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textUsername.Name = "textUsername";
-            this.textUsername.Size = new System.Drawing.Size(130, 25);
+            this.textUsername.Size = new System.Drawing.Size(162, 28);
             this.textUsername.TabIndex = 3;
             // 
             // LblID
@@ -96,24 +98,26 @@
             this.LblID.AutoSize = true;
             this.LblID.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LblID.ForeColor = System.Drawing.SystemColors.Window;
-            this.LblID.Location = new System.Drawing.Point(538, 267);
+            this.LblID.Location = new System.Drawing.Point(672, 320);
+            this.LblID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblID.Name = "LblID";
-            this.LblID.Size = new System.Drawing.Size(31, 24);
+            this.LblID.Size = new System.Drawing.Size(44, 29);
             this.LblID.TabIndex = 2;
             this.LblID.Text = "ID";
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1104, 760);
+            this.ClientSize = new System.Drawing.Size(1380, 912);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.textPassword);
             this.Controls.Add(this.LblPassword);
             this.Controls.Add(this.textUsername);
             this.Controls.Add(this.LblID);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
