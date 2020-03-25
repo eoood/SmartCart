@@ -561,13 +561,13 @@ namespace smartcart_1
             {
                 MessageBox.Show(ex.Message);
             }
-            //chartSales2.Series[0].Points.Clear();
-            //chartSales2.Series[1].Points.Clear();
-            //chartSales2.Series[2].Points.Clear();
-            //chartSales2.Series[3].Points.Clear();
-            //chartSales2.Series[4].Points.Clear();
-            //chartSales2.Series[5].Points.Clear();
-            //chartSales2.Series[6].Points.Clear();
+            chartSales2.Series[0].Points.Clear();
+            chartSales2.Series[1].Points.Clear();
+            chartSales2.Series[2].Points.Clear();
+            chartSales2.Series[3].Points.Clear();
+            chartSales2.Series[4].Points.Clear();
+            chartSales2.Series[5].Points.Clear();
+            chartSales2.Series[6].Points.Clear();
 
             chartSales2.Series.Clear();
             Series series1 = chartSales2.Series.Add((string)chartpdsale2[0]);
