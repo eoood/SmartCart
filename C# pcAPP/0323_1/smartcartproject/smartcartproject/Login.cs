@@ -66,7 +66,7 @@ namespace smartcartproject
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Dispose(true);
-            Application.Exit()
+            Application.Exit();
         }
     }
 }
