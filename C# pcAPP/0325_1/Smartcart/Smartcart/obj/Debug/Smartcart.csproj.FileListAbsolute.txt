@@ -16,3 +16,6 @@ D:\songchanho\C#_Study\Project\Smartcart\Smartcart\bin\Debug\MySql.Data.xml
 D:\songchanho\C#_Study\Project\Smartcart\Smartcart\obj\Debug\Smartcart.Login.resources
 D:\songchanho\C#_Study\Project\Smartcart\Smartcart\obj\Debug\Smartcart.LoginChecker.resources
 D:\songchanho\C#_Study\Project\Smartcart\Smartcart\obj\Debug\Smartcart.csproj.CopyComplete
+D:\HSJ\SmartCart\C# pcAPP\0325_1\Smartcart\Smartcart\bin\Debug\Smartcart.exe.config
+D:\HSJ\SmartCart\C# pcAPP\0325_1\Smartcart\Smartcart\obj\Debug\Smartcart.exe
+D:\HSJ\SmartCart\C# pcAPP\0325_1\Smartcart\Smartcart\obj\Debug\Smartcart.pdb

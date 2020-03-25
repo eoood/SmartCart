@@ -50,3 +50,6 @@ D:\HSJ\c#pc\0325_1_sj\Smartcart\Smartcart\bin\Debug\BouncyCastle.Crypto.dll
 D:\HSJ\c#pc\0325_1_sj\Smartcart\Smartcart\bin\Debug\Ubiety.Dns.Core.dll
 D:\HSJ\c#pc\0325_1_sj\Smartcart\Smartcart\bin\Debug\Renci.SshNet.dll
 D:\HSJ\c#pc\0325_1_sj\Smartcart\Smartcart\bin\Debug\MySql.Data.xml
+D:\HSJ\SmartCart\C# pcAPP\0325_2_sj\Smartcart\Smartcart\bin\Debug\Smartcart.exe.config
+D:\HSJ\SmartCart\C# pcAPP\0325_2_sj\Smartcart\Smartcart\obj\Debug\Smartcart.exe
+D:\HSJ\SmartCart\C# pcAPP\0325_2_sj\Smartcart\Smartcart\obj\Debug\Smartcart.pdb
