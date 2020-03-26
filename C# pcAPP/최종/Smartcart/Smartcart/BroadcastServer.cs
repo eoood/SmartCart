@@ -21,6 +21,8 @@ namespace Smartcart
         private Socket listener;
         private int port;
 
+
+
         //static public TextBox txtBox = null;
 
         public static void start(int _port/*, TextBox mTextBox*/) //   서버 시작
@@ -42,7 +44,9 @@ namespace Smartcart
                     txtBox.AppendText("서버를 종료합니다.\r\n");
                 }));
             }*/
-                       
+
+
+
             foreach (SocketHandler socketHandler in socketList)
             {
                 socketHandler.end();
@@ -86,7 +90,11 @@ namespace Smartcart
                 }));
             }
             */
-                                          
+
+
+
+
+
             while (true)
             {
                 Console.WriteLine("+++++++++++++");
@@ -121,7 +129,9 @@ namespace Smartcart
                         txtBox.AppendText(socketList.Count + "번째 컴퓨터 - " + acceptedIP + "에서 접속하였습니다.\r\n");
                     }));
                 }*/
+
             }
+
         }
     }
 }
@@ -147,11 +157,14 @@ public class SocketHandler
         this.socket = socket;
         threadHandler = new Thread(new ThreadStart(Handler));
         threadHandler.Start();
+
+
+
         //txtBox = mTextBox;
 
     }
 
-    public void Handler()   //  실질적인 서버작업
+    public void Handler()                   //  실질적인 서버작업
     {
         byte[] buffer = new byte[4096];
         int bufferCount;
@@ -216,6 +229,9 @@ public class SocketHandler
                 {
                     MessageBox.Show(ex.Message);
                 }
+
+
+
 
                 //////////////////////////////////////////////////////////////////////////////////////////////
                 /*

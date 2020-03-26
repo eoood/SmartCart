@@ -50,6 +50,8 @@ namespace Smartcart
             dataGridView1.ClearSelection();
             dataGridView2.ClearSelection();
             dataGridView3.ClearSelection();
+
+            this.MaximizeBox = false;
         }
 
         public void fThreadStart()
@@ -103,7 +105,7 @@ namespace Smartcart
         }
 
         private void Main_Load(object sender, EventArgs e)
-        {
+        {            
             Checkit();
             VisibleFalseLabel();
             LblCart.Visible = true;

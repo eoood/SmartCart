@@ -54,7 +54,7 @@ namespace Smartcart
                     string userName = textUsername.Text;
                     loginEventHandler(userName);
                     DialogResult = DialogResult.OK;
-                    BroadcastServer.start(9999/*, textBox1*/);
+                    //BroadcastServer.start(9999/*, textBox1*/);
                 }
                 else
                 {
