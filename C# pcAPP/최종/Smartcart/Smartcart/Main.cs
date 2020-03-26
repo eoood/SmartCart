@@ -53,7 +53,12 @@ namespace Smartcart
 
             this.MaximizeBox = false;
         }
-
+        //로그인 생성 시 메시지박스 띄우기
+        private void LoginSuccess(string userName)
+        {
+            //MessageBox.Show(userName + "님이 로그인하셨습니다.");
+            //LblAdmin.Text = "안녕하세요 " + userName + "님";
+        }
         public void fThreadStart()
         {
             _thread = new Thread(Run);
@@ -272,12 +277,8 @@ namespace Smartcart
             dataGridView3.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
 
-        //로그인 생성 시 메시지박스 띄우기
-        private void LoginSuccess(string userName)
-        {
-            //MessageBox.Show(userName + "님이 로그인하셨습니다.");
-            LblAdmin.Text = "안녕하세요 " + userName + "님";
-        }
+     
+
 
         //btn, lbl 등 visible 비활성화 함수
         private void VisibleFalseLabel()
@@ -1181,6 +1182,11 @@ namespace Smartcart
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
             ThreadAbort();
+        }
+
+        private void LblAdmin_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
