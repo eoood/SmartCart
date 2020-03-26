@@ -26,9 +26,7 @@ namespace Smartcart
             InitializeComponent();           
             db = new Con_datatable();
             db.ConnectDB();
-            FillComboPdName();
-            FillComboMemName();
-
+            
             //PrivateFontCollection privatieFonts = new PrivateFontCollection();
             //privatieFonts.AddFontFile("NanumSquareRoundR.ttf");
 
@@ -53,19 +51,14 @@ namespace Smartcart
 
             this.MaximizeBox = false;
         }
-        //로그인 생성 시 메시지박스 띄우기
-        private void LoginSuccess(string userName)
-        {
-            //MessageBox.Show(userName + "님이 로그인하셨습니다.");
-            //LblAdmin.Text = "안녕하세요 " + userName + "님";
-        }
+        //스레드 시작 함수
         public void fThreadStart()
         {
             _thread = new Thread(Run);
 
             _thread.Start();
         }
-
+        //스레드 함수
         private void Run()
         {
             try
@@ -81,7 +74,7 @@ namespace Smartcart
                             string nowWeek = DTPlast1.Value.ToString("dddd"); //오늘 요일
                             int nowHour = DateTime.Now.Hour; //오늘 시
                             int nowMinute = DateTime.Now.Minute; //오늘 분
-                            int lastDay = DateTime.Now.Day; //날짜
+                            int lastDay = DateTime.Now.Day; //오늘 날짜
                             //실시간 시간
                             LblNowDate.Text = "" + nowYear + "년 " + nowMonth + "월 " + lastDay + "일 " + nowWeek + " " + nowHour + "시 " + nowMinute + "분";
 
@@ -100,7 +93,7 @@ namespace Smartcart
                 MessageBox.Show(ex.Message);
             }
         }
-
+        //스레드 강제 종료 함수
         public void ThreadAbort()
         {
             if (_thread.IsAlive)
@@ -110,7 +103,7 @@ namespace Smartcart
         }
 
         private void Main_Load(object sender, EventArgs e)
-        {            
+        {
             Checkit();
             VisibleFalseLabel();
             LblCart.Visible = true;
@@ -276,10 +269,12 @@ namespace Smartcart
             dataGridView3.ColumnHeadersDefaultCellStyle.BackColor = Color.CornflowerBlue;
             dataGridView3.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
-
-     
-
-
+        //로그인 생성 시 메시지박스 띄우기
+        private void LoginSuccess(string userName)
+        {
+            //MessageBox.Show(userName + "님이 로그인하셨습니다.");
+            LblAdmin.Text = "안녕하세요 " + userName + "님";
+        }
         //btn, lbl 등 visible 비활성화 함수
         private void VisibleFalseLabel()
         {
@@ -350,7 +345,6 @@ namespace Smartcart
             DTPlast2.Visible = false;
             pictureBox4.Visible = false;
         }
-
         //메인 메뉴 버튼 기본이미지로 색깔 초기화
         private void SetDefaultImage()
         {
@@ -361,7 +355,6 @@ namespace Smartcart
             btnOutbound.BackgroundImage = Image.FromFile("menuOB1.jpg");
             btnChart.BackgroundImage = Image.FromFile("menuChart1.jpg");
         }
-
         //체크 pictureBox 전부 비활성화 함수
         private void Checkit()
         {
@@ -398,9 +391,7 @@ namespace Smartcart
             string sql = "SELECT * FROM `cart`";
             DataTable dt = db.GetDBTable(sql);
             dataGridView1.DataSource = dt;
-
         }
-
         //회원 관리
         private void btnMember_Click(object sender, EventArgs e)
         {
@@ -428,7 +419,6 @@ namespace Smartcart
             dataGridView2.Columns["userPhone"].HeaderText = "핸드폰 번호";
 
         }
-
         //상품 관리
         private void btnProduct_Click(object sender, EventArgs e)
         {
@@ -461,7 +451,6 @@ namespace Smartcart
             dataGridView2.Columns["quantity"].HeaderText = "수량";
             dataGridView2.Columns["barcode"].HeaderText = "바코드 번호";
         }
-
         //입고 내역
         private void btnInbound_Click(object sender, EventArgs e)
         {
@@ -485,7 +474,6 @@ namespace Smartcart
             dataGridView2.Columns["date"].HeaderText = "날짜";
             dataGridView2.Columns["quantity"].HeaderText = "수량";
         }
-
         //출고 내역
         private void btnOutbound_Click(object sender, EventArgs e)
         {
@@ -509,7 +497,6 @@ namespace Smartcart
             dataGridView2.Columns["price"].HeaderText = "가격";
             dataGridView2.Columns["buydate"].HeaderText = "구매날짜";
         }
-
         //통 계(그래프 차트)
         private void btnChart_Click(object sender, EventArgs e)
         {
@@ -528,8 +515,7 @@ namespace Smartcart
             btnCheck1.Visible = true;
             btnChart.BackgroundImage = Image.FromFile("menuChart2.jpg");
         }
-
-        //회원 삭제
+        //회원 삭제 메뉴
         private void LblMemDel_Click(object sender, EventArgs e)
         {
             Checkit();
@@ -566,9 +552,11 @@ namespace Smartcart
             textMemPassword.Text = "";
             textMemPhone.Text = "";
             textMemMail.Text = "";
-        }
 
-        //상품 주문
+            cbBoxMemName.Items.Clear();
+            FillComboMemName();
+        }
+        //상품 주문 메뉴
         private void LblPdOrder_Click(object sender, EventArgs e)
         {
             Checkit();
@@ -593,16 +581,19 @@ namespace Smartcart
 
             string sql = "SELECT name, quantity FROM `product`";
             DataTable dt = db.GetDBTable(sql);
-            dataGridView3.DataSource = dt;
+            dataGridView3.DataSource = dt;       
 
             dataGridView3.Columns["name"].HeaderText = "상품명";
             dataGridView3.Columns["quantity"].HeaderText = "상품수량";
             
             cbBoxPdName.SelectedIndex = -1;
             textPdQuantity.Text = "";
+
+            cbBoxPdName.Items.Clear();
+            FillComboPdName();
         }
 
-        //상품 가격 수정
+        //상품 가격 수정 메뉴
         private void LblPriceMdfy_Click(object sender, EventArgs e)
         {
             Checkit();
@@ -630,14 +621,16 @@ namespace Smartcart
             dataGridView3.DataSource = dt;
 
             dataGridView3.Columns["name"].HeaderText = "상품명";
-            dataGridView3.Columns["price"].HeaderText = "상품가격";
-
+            dataGridView3.Columns["price"].HeaderText = "상품가격";            
 
             cbBoxPdName.SelectedIndex = -1;
             textPdPrice.Text = "";
+
+            cbBoxPdName.Items.Clear();
+            FillComboPdName();
         }
 
-        //상품 등록
+        //상품 등록 메뉴
         private void LblPdRegi_Click(object sender, EventArgs e)
         {
             Checkit();
@@ -668,7 +661,7 @@ namespace Smartcart
             textPdName.Text = "";
             textPdPrice.Text = "";
         }
-        //상품 삭제
+        //상품 삭제 메뉴
         private void LblPdDel_Click(object sender, EventArgs e)
         {
             Checkit();
@@ -685,18 +678,20 @@ namespace Smartcart
             cbBoxPdName.Visible = true;
             picBoxCheck8.Visible = true;
             dataGridView3.Visible = true;
-            btnPdDel.Visible = true;
-            
+            btnPdDel.Visible = true;            
             btnProduct.BackgroundImage = Image.FromFile("menuProduct2.jpg");
 
             string sql = "SELECT name FROM `product`";
             DataTable dt = db.GetDBTable(sql);
             dataGridView3.DataSource = dt;
 
-            dataGridView2.Columns["name"].HeaderText = "상품명";
+            dataGridView3.Columns["name"].HeaderText = "상품명";            
             
             cbBoxPdName.SelectedIndex = -1;
             textPdPrice.Text = "";
+
+            cbBoxPdName.Items.Clear();
+            FillComboPdName();
         }
         //상품별 판매 그래프
         private void LblProdChart_Click(object sender, EventArgs e)
@@ -738,7 +733,7 @@ namespace Smartcart
             {
                 MessageBox.Show(ex.Message);
             }
-            MemconDB.Close();            
+            MemconDB.Close();
         }
         //콤보박스 DB 연결 함수(상품 이름)
         public void FillComboPdName()
@@ -774,18 +769,14 @@ namespace Smartcart
             MySqlCommand MemcmdDB2 = new MySqlCommand(QueryMemDel, MemconDB2);
             MySqlDataReader myReader2;
 
-            if ((cbBoxMemName.SelectedIndex >= 0))
+            if (cbBoxMemName.SelectedIndex >= 0)
             {
-
                 MessageBox.Show("삭제되었습니다.", "관리자");
-
             }
             else
             {
                 MessageBox.Show("회원을 입력하시오", "관리자");
             }
-
-
             try
             {
                 MemconDB2.Open();
@@ -799,19 +790,19 @@ namespace Smartcart
             }
             MemconDB2.Close();
             cbBoxMemName.SelectedIndex = -1;
+            cbBoxMemName.Items.Clear();
+            FillComboMemName();
+                        
             textMemID.Text = "";
             textMemPassword.Text = "";
             textMemPhone.Text = "";
             textMemMail.Text = "";
 
-            string sql = "SELECT name FROM `product`";
+            string sql = "SELECT userName FROM `user`";
             DataTable dt = db.GetDBTable(sql);
             dataGridView3.DataSource = dt;
 
-            dataGridView2.Columns["name"].HeaderText = "상품명";
-
-
-
+            dataGridView3.Columns["userName"].HeaderText = "회원이름";
         }
         //콤보박스 선택 시(회원 이름)
         private void cbBoxMemName_SelectedValueChanged(object sender, EventArgs e)
@@ -848,6 +839,10 @@ namespace Smartcart
         //상품 주문 버튼
         private void btnPdOrder_Click(object sender, EventArgs e)
         {
+            int nowYear = DateTime.Now.Year; //오늘 년
+            int nowMonth = DateTime.Now.Month; //오늘 월
+            int lastDay = DateTime.Now.Day; //오늘 날짜
+
             string constring = "datasource=localhost; database=smartcart; username=root; password=apmsetup";
             string QueryPdOrder1 = "SELECT * FROM product WHERE name = '" + cbBoxPdName.SelectedItem + "'";
             string sQuantity = null;
@@ -856,38 +851,23 @@ namespace Smartcart
             MySqlCommand PdcmdDB1 = new MySqlCommand(QueryPdOrder1, PdconDB1);
             MySqlDataReader myreader1;
 
-
             if ((cbBoxPdName.SelectedIndex >= 0) && (textPdQuantity.Text != ""))
             {
-
                 MessageBox.Show("주문되었습니다.", "관리자");
-
-            }
-            else if (cbBoxPdName.SelectedIndex < 0)
-            {
-                MessageBox.Show("상품을 입력하시오", "관리자");
-            }
-            else
-            {
-                MessageBox.Show("수량을 입력하시오", "관리자");
-            }
-
-            try
-            {
-                PdconDB1.Open();
-                myreader1 = PdcmdDB1.ExecuteReader();
-                while(myreader1.Read())
+                try
                 {
-                    sQuantity = myreader1.GetString("quantity");
-                    PdQuantity = textPdQuantity.Text;
+                    PdconDB1.Open();
+                    myreader1 = PdcmdDB1.ExecuteReader();
+                    while (myreader1.Read())
+                    {
+                        sQuantity = myreader1.GetString("quantity");
+                        PdQuantity = textPdQuantity.Text;
+                    }
                 }
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message + 11);
-            }
-            if (textPdQuantity.Text != "")
-            {
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + 11);
+                }
                 string QueryPdOrder2 = "UPDATE product SET quantity = " + (Convert.ToInt32(sQuantity) + Convert.ToInt32(PdQuantity)) + " WHERE name = '" + cbBoxPdName.SelectedItem + "'";
                 MySqlConnection PdconDB2 = new MySqlConnection(constring);
                 MySqlCommand PdcmdDB2 = new MySqlCommand(QueryPdOrder2, PdconDB2);
@@ -907,28 +887,35 @@ namespace Smartcart
                 string sql = "SELECT name, quantity FROM `product`";
                 DataTable dt = db.GetDBTable(sql);
                 dataGridView3.DataSource = dt;
-            }
 
-            // 주문 시 입고내역 데이터베이스에 추가
-            string QueryPdOrder3 = "INSERT INTO inbound (product, quantity, date) VALUES ('" + cbBoxPdName.SelectedItem + "', '" + PdQuantity + "', '" + "2020-03-17')";
-            MySqlConnection PdconDB3 = new MySqlConnection(constring);
-            MySqlCommand PdcmdDB3 = new MySqlCommand(QueryPdOrder3, PdconDB3);
-            MySqlDataReader myreader3;
-            try
-            {
-                PdconDB3.Open();
-                myreader3 = PdcmdDB3.ExecuteReader();
-                MySqlDataAdapter adapter1 = new MySqlDataAdapter(QueryPdOrder3, PdconDB3);
-                MySqlCommandBuilder builder1 = new MySqlCommandBuilder(adapter1);
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            
+                // 주문 시 입고내역 데이터베이스에 추가
+                string QueryPdOrder3 = $"INSERT INTO inbound (product, quantity, date) VALUES ('{cbBoxPdName.SelectedItem}', '{PdQuantity}', '{nowYear}-{nowMonth}-{lastDay}')";
+                MySqlConnection PdconDB3 = new MySqlConnection(constring);
+                MySqlCommand PdcmdDB3 = new MySqlCommand(QueryPdOrder3, PdconDB3);
+                MySqlDataReader myreader3;
+                try
+                {
+                    PdconDB3.Open();
+                    myreader3 = PdcmdDB3.ExecuteReader();
+                    MySqlDataAdapter adapter1 = new MySqlDataAdapter(QueryPdOrder3, PdconDB3);
+                    MySqlCommandBuilder builder1 = new MySqlCommandBuilder(adapter1);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                cbBoxPdName.SelectedIndex = -1;
+                textPdQuantity.Text = "";
 
-            cbBoxPdName.SelectedIndex = -1;
-            textPdQuantity.Text = "";
+            }
+            else if (cbBoxPdName.SelectedIndex < 0)
+            {
+                MessageBox.Show("상품을 입력하시오", "관리자");
+            }
+            else
+            {
+                MessageBox.Show("수량을 입력하시오", "관리자");
+            }
         }
         //상품 가격 수정 버튼
         private void btnPdMdfy_Click(object sender, EventArgs e)
@@ -939,37 +926,22 @@ namespace Smartcart
             MySqlConnection PdconDB1 = new MySqlConnection(constring);
             MySqlCommand PdcmdDB1 = new MySqlCommand(QueryPdMdfy1, PdconDB1);
             MySqlDataReader myreader1;
-
-
             if ((textPdPrice.Text != "") && (cbBoxPdName.SelectedIndex > 0))
             {
                 MessageBox.Show("수정되었습니다.", "관리자");
-            }
-            else if (cbBoxPdName.SelectedIndex < 0)
-            {
-                MessageBox.Show("상품을 입력하시오", "관리자");
-            }
-            else
-            {
-                MessageBox.Show("가격을 입력하시오", "관리자");
-            }
-
-            try
-            {
-                PdconDB1.Open();
-                myreader1 = PdcmdDB1.ExecuteReader();
-                while(myreader1.Read())
+                try
                 {
-                    PdPrice = textPdPrice.Text;
+                    PdconDB1.Open();
+                    myreader1 = PdcmdDB1.ExecuteReader();
+                    while (myreader1.Read())
+                    {
+                        PdPrice = textPdPrice.Text;
+                    }
                 }
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-            if (textPdPrice.Text != "")
-            {
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
                 string QueryPdMdfy2 = "UPDATE product SET price = " + Convert.ToInt32(PdPrice) + " WHERE name = '" + cbBoxPdName.SelectedItem + "'";
                 MySqlConnection PdconDB2 = new MySqlConnection(constring);
                 MySqlCommand PdcmdDB2 = new MySqlCommand(QueryPdMdfy2, PdconDB2);
@@ -995,6 +967,14 @@ namespace Smartcart
                 dataGridView3.Columns["name"].HeaderText = "상품명";
                 dataGridView3.Columns["price"].HeaderText = "상품가격";
             }
+            else if ((cbBoxPdName.SelectedIndex < 0) && (textPdPrice.Text != ""))
+            {
+                MessageBox.Show("상품을 입력하시오", "관리자");
+            }
+            else
+            {
+                MessageBox.Show("가격을 입력하시오", "관리자");
+            }
         }
         //상품 등록 버튼
         private void btnPdRegi_Click(object sender, EventArgs e)
@@ -1008,9 +988,26 @@ namespace Smartcart
 
             if ((textPdName.Text != "") && (textPdPrice.Text != ""))
             {
-
                 MessageBox.Show("등록되었습니다.", "관리자");
+                try
+                {
+                    PdconDB3.Open();
+                    myreader3 = PdcmdDB3.ExecuteReader();
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(QueryPdRegi, PdconDB3);
+                    MySqlCommandBuilder builder = new MySqlCommandBuilder(adapter);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                textPdName.Text = "";
+                textPdPrice.Text = "";
+                cbBoxPdName.Items.Clear();
+                FillComboPdName();
 
+                string sql = "SELECT name FROM `product`";
+                DataTable dt = db.GetDBTable(sql);
+                dataGridView3.DataSource = dt;
             }
             else if (textPdName.Text == "")
             {
@@ -1019,25 +1016,9 @@ namespace Smartcart
             else if (textPdPrice.Text == "")
             {
                 MessageBox.Show("가격을 입력하시오", "관리자");
-            }
-          
+            }          
 
-            try
-            {
-                PdconDB3.Open();
-                myreader3 = PdcmdDB3.ExecuteReader();
-                MySqlDataAdapter adapter = new MySqlDataAdapter(QueryPdRegi, PdconDB3);
-                MySqlCommandBuilder builder = new MySqlCommandBuilder(adapter);
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-            textPdName.Text = "";
-            textPdPrice.Text = "";
-
-
+           
         }
 
         //상품삭제 버튼
@@ -1046,45 +1027,38 @@ namespace Smartcart
             string constring = "datasource=localhost; username=root; password=apmsetup; database=smartcart;";
             string QueryPdRegi = "DELETE FROM product WHERE name = '" + cbBoxPdName.SelectedItem + "'";
            
-
-
             MySqlConnection PdconDB3 = new MySqlConnection(constring);
             MySqlCommand PdcmdDB3 = new MySqlCommand(QueryPdRegi, PdconDB3);
             MySqlDataReader myreader3;
-
-            if (cbBoxPdName.SelectedIndex>0)
+            if (cbBoxPdName.SelectedIndex>=0)
             {
-
                 MessageBox.Show("삭제되었습니다.", "관리자");
+                try
+                {
+                    PdconDB3.Open();
+                    myreader3 = PdcmdDB3.ExecuteReader();
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(QueryPdRegi, PdconDB3);
+                    MySqlCommandBuilder builder = new MySqlCommandBuilder(adapter);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
 
+                cbBoxPdName.SelectedIndex = -1;
+                cbBoxPdName.Items.Clear();
+                FillComboPdName();
+
+                string sql = "SELECT name FROM `product`";
+                DataTable dt = db.GetDBTable(sql);
+                dataGridView3.DataSource = dt;
             }
             else 
             {
                 MessageBox.Show("상품을 입력하시오", "관리자");
             }
-           
-
-
-            try
-            {
-                PdconDB3.Open();
-                myreader3 = PdcmdDB3.ExecuteReader();
-                MySqlDataAdapter adapter = new MySqlDataAdapter(QueryPdRegi, PdconDB3);
-                MySqlCommandBuilder builder = new MySqlCommandBuilder(adapter);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-
-            cbBoxPdName.SelectedIndex = -1;
-
-            string sql = "SELECT name FROM `product`";
-            DataTable dt = db.GetDBTable(sql);
-            dataGridView3.DataSource = dt;
-
         }
+
         //총매출액 그래프 조회 버튼 
         private void btnCheck1_Click(object sender, EventArgs e)
         {
@@ -1118,6 +1092,7 @@ namespace Smartcart
             }
             conDB.Close();
         }
+
         //상품별 매출액 그래프 조회 버튼
         private void btnCheck2_Click(object sender, EventArgs e)
         {
@@ -1175,18 +1150,12 @@ namespace Smartcart
                 {
                     MessageBox.Show(ex.Message);
                 }
-
             }
         }
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
             ThreadAbort();
-        }
-
-        private void LblAdmin_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
