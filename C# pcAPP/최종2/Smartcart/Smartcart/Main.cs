@@ -49,6 +49,8 @@ namespace Smartcart
             dataGridView2.ClearSelection();
             dataGridView3.ClearSelection();
 
+
+
             this.MaximizeBox = false;
         }
         //스레드 시작 함수
@@ -166,6 +168,8 @@ namespace Smartcart
             myreadersale = cmdsaleDB.ExecuteReader();
             chartSum.Series.Clear();
             chartSum.Series.Add("price");
+            chartSum.ChartAreas["ChartArea1"].AxisX.LabelStyle.Interval = 1;
+
             try
             {
                 while (myreadersale.Read())
@@ -179,6 +183,8 @@ namespace Smartcart
                 MessageBox.Show(ex.Message);
             }
             consaleDB.Close();
+
+            chartProd.ChartAreas["ChartArea1"].AxisX.LabelStyle.Interval = 1;
 
             //상품별 매출액 그래프
             ArrayList ProdList = new ArrayList();            
@@ -1062,6 +1068,8 @@ namespace Smartcart
         //총매출액 그래프 조회 버튼 
         private void btnCheck1_Click(object sender, EventArgs e)
         {
+            chartSum.ChartAreas["ChartArea1"].AxisX.LabelStyle.Interval = 1;
+
             int firstyear1 = DTPfirst1.Value.Year;
             int firstmonth1 = DTPfirst1.Value.Month;
             int firstday1 = DTPfirst1.Value.Day;
@@ -1096,6 +1104,8 @@ namespace Smartcart
         //상품별 매출액 그래프 조회 버튼
         private void btnCheck2_Click(object sender, EventArgs e)
         {
+            chartProd.ChartAreas["ChartArea1"].AxisX.LabelStyle.Interval = 1;
+
             int firstyear2 = DTPfirst2.Value.Year;
             int firstmonth2 = DTPfirst2.Value.Month;
             int firstday2 = DTPfirst2.Value.Day;
