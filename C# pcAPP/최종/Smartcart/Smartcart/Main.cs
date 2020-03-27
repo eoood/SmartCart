@@ -206,7 +206,7 @@ namespace Smartcart
             ArrayList QueryPdCnt = new ArrayList();
             for (int i = 0; i < ProdList.Count; i++)
             {
-                QueryPdCnt.Add($"SELECT date_format(buydate, '%m-%d') AS date, count(product) FROM `order` WHERE product = '{ProdList[i]}' AND buydate BETWEEN date('{firstyear2}-{firstmonth2}-{firstday2}') AND date('{lastyear2}-{lastmonth2}-{lastday2}') GROUP BY buydate");
+                QueryPdCnt.Add($"SELECT product, date_format(buydate, '%m-%d') AS date, count(product) FROM `order` WHERE product = '{ProdList[i]}' AND buydate BETWEEN date('{firstyear2}-{firstmonth2}-{firstday2}') AND date('{lastyear2}-{lastmonth2}-{lastday2}') GROUP BY buydate");
                 MySqlConnection conPdCntDB = new MySqlConnection(constring);
                 MySqlCommand cmdPdCntDB = new MySqlCommand((string)QueryPdCnt[i], conPdCntDB);
                 MySqlDataReader myreader;
@@ -218,7 +218,11 @@ namespace Smartcart
                     {
                         string sCount = myreader.GetString("count(product)");
                         string sDay = myreader.GetString("date");
-                        chartProd.Series[(string)ProdList[i]].Points.AddXY(sDay, sCount);
+                        string sProduct = myreader.GetString("product");
+                        if(sProduct.Equals((string)ProdList[i]))
+                        {
+                            chartProd.Series[(string)ProdList[i]].Points.AddXY(sDay, sCount);
+                        }                        
                     }
                     conPdCntDB.Close();
                 }
@@ -226,7 +230,6 @@ namespace Smartcart
                 {
                     MessageBox.Show(ex.Message + ProdList.Count);
                 }
-
             }
 
             //실시간 시간
@@ -318,6 +321,8 @@ namespace Smartcart
             LblPdPrice.Visible = false;
             LblPdQuantity.Visible = false;
             LblDateBetween.Visible = false;
+            LblMemOB.Visible = false;
+            LblMemOB1.Visible = false;
             btnMemDel.Visible = false;
             btnPdOrder.Visible = false;
             btnPdMdfy.Visible = false;
@@ -334,6 +339,8 @@ namespace Smartcart
             textPdQuantity.Visible = false;
             cbBoxMemName.Visible = false;
             cbBoxPdName.Visible = false;
+            cbBoxMemOBName.Visible = false;
+            cbBoxDate.Visible = false;
             dataGridView1.Visible = false;
             dataGridView2.Visible = false;
             dataGridView3.Visible = false;
@@ -371,6 +378,7 @@ namespace Smartcart
             picBoxCheck11.Visible = false;
             picBoxCheck12.Visible = false;
             picBoxCheck13.Visible = false;
+            picBoxCheck14.Visible = false;
         }
         //실시간 정보 (카트 현황)
         private void btnCart_Click(object sender, EventArgs e)
@@ -481,9 +489,11 @@ namespace Smartcart
             SetDefaultImage();
             VisibleFalseLabel();
             picBoxCheck11.Visible = true;
+            
             LblOutbound.Visible = true;
             LblPdOutbound.Visible = true;
             LblPdOutbound1.Visible = true;
+            LblMemOB.Visible = true;
             dataGridView2.Visible = true;
             btnOutbound.BackgroundImage = Image.FromFile("menuOB2.jpg");
 
@@ -1130,7 +1140,7 @@ namespace Smartcart
             ArrayList QueryPdCnt = new ArrayList();
             for (int i = 0; i < ProdList.Count; i++)
             {
-                QueryPdCnt.Add($"SELECT date_format(buydate, '%m-%d') AS date, count(product) FROM `order` WHERE product = '{ProdList[i]}' AND buydate BETWEEN date('{firstyear2}-{firstmonth2}-{firstday2}') AND date('{lastyear2}-{lastmonth2}-{lastday2}') GROUP BY buydate");
+                QueryPdCnt.Add($"SELECT product, date_format(buydate, '%m-%d') AS date, count(product) FROM `order` WHERE product = '{ProdList[i]}' AND buydate BETWEEN date('{firstyear2}-{firstmonth2}-{firstday2}') AND date('{lastyear2}-{lastmonth2}-{lastday2}') GROUP BY buydate");
                 MySqlConnection conPdCntDB = new MySqlConnection(constring);
                 MySqlCommand cmdPdCntDB = new MySqlCommand((string)QueryPdCnt[i], conPdCntDB);
                 MySqlDataReader myreader;
@@ -1142,7 +1152,11 @@ namespace Smartcart
                     {
                         string sCount = myreader.GetString("count(product)");
                         string sDay = myreader.GetString("date");
-                        chartProd.Series[(string)ProdList[i]].Points.AddXY(sDay, sCount);
+                        string sProduct = myreader.GetString("product");
+                        if (sProduct.Equals((string)ProdList[i]))
+                        {
+                            chartProd.Series[(string)ProdList[i]].Points.AddXY(sDay, sCount);
+                        }
                     }
                     conPdCntDB.Close();
                 }
@@ -1156,6 +1170,27 @@ namespace Smartcart
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
             ThreadAbort();
+        }
+        //회원별 구매 내역
+        private void LblMemOB_Click(object sender, EventArgs e)
+        {
+            Checkit();
+            SetDefaultImage();
+            VisibleFalseLabel();
+            LblOutbound.Visible = true;
+            LblPdOutbound.Visible = true;
+            LblMemOB.Visible = true;
+            LblMemOB1.Visible = true;
+            picBoxCheck14.Visible = true;
+            cbBoxMemOBName.Visible = true;
+
+            cbBoxMemOBName.SelectedIndex = -1;
+            cbBoxMemOBName.Items.Clear();
+            FillComboMemName();
+
+            string sql = "SELECT product, buydate FROM `order` WHERE orderID = '" + cbBoxMemOBName + "'";
+            DataTable dt = db.GetDBTable(sql);
+            dataGridView2.DataSource = dt;
         }
     }
 }

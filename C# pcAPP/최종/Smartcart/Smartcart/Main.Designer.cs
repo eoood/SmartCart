@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.btnCart = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -129,6 +129,11 @@
             this.LblMemManagement = new System.Windows.Forms.Label();
             this.LblProductManagement = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.LblMemOB = new System.Windows.Forms.Label();
+            this.picBoxCheck14 = new System.Windows.Forms.PictureBox();
+            this.cbBoxMemOBName = new System.Windows.Forms.ComboBox();
+            this.LblMemOB1 = new System.Windows.Forms.Label();
+            this.cbBoxDate = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxCheck3)).BeginInit();
@@ -151,6 +156,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartProd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartSum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxCheck14)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCart
@@ -419,7 +425,6 @@
             this.LblOutbound.TabIndex = 23;
             this.LblOutbound.Text = "출고 내역";
             this.LblOutbound.Visible = false;
-            this.LblOutbound.Click += new System.EventHandler(this.btnOutbound_Click);
             // 
             // LblInbound
             // 
@@ -433,7 +438,6 @@
             this.LblInbound.TabIndex = 22;
             this.LblInbound.Text = "입고 내역";
             this.LblInbound.Visible = false;
-            this.LblInbound.Click += new System.EventHandler(this.btnInbound_Click);
             // 
             // LblProduct
             // 
@@ -447,7 +451,6 @@
             this.LblProduct.TabIndex = 21;
             this.LblProduct.Text = "상품 관리";
             this.LblProduct.Visible = false;
-            this.LblProduct.Click += new System.EventHandler(this.btnProduct_Click);
             // 
             // LblMember
             // 
@@ -461,7 +464,6 @@
             this.LblMember.TabIndex = 20;
             this.LblMember.Text = "회원 관리";
             this.LblMember.Visible = false;
-            this.LblMember.Click += new System.EventHandler(this.btnMember_Click);
             // 
             // LblCart
             // 
@@ -647,7 +649,6 @@
             this.LblChart.TabIndex = 53;
             this.LblChart.Text = "통 계";
             this.LblChart.Visible = false;
-            this.LblChart.Click += new System.EventHandler(this.LblProdChart_Click);
             // 
             // LblMain
             // 
@@ -810,14 +811,14 @@
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView2.ColumnHeadersHeight = 30;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)), true);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)), true);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView2.GridColor = System.Drawing.SystemColors.Window;
             this.dataGridView2.Location = new System.Drawing.Point(383, 203);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -1145,24 +1146,24 @@
             // 
             this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.dataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView3.ColumnHeadersHeight = 30;
             this.dataGridView3.Location = new System.Drawing.Point(753, 203);
             this.dataGridView3.Name = "dataGridView3";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView3.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView3.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView3.RowHeadersWidth = 51;
             this.dataGridView3.RowTemplate.Height = 27;
             this.dataGridView3.Size = new System.Drawing.Size(263, 392);
@@ -1170,32 +1171,32 @@
             // 
             // chartProd
             // 
-            chartArea5.Name = "ChartArea1";
-            this.chartProd.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chartProd.Legends.Add(legend5);
-            this.chartProd.Location = new System.Drawing.Point(383, 208);
+            chartArea1.Name = "ChartArea1";
+            this.chartProd.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartProd.Legends.Add(legend1);
+            this.chartProd.Location = new System.Drawing.Point(283, 208);
             this.chartProd.Name = "chartProd";
-            series5.ChartArea = "ChartArea1";
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.chartProd.Series.Add(series5);
-            this.chartProd.Size = new System.Drawing.Size(633, 434);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartProd.Series.Add(series1);
+            this.chartProd.Size = new System.Drawing.Size(806, 434);
             this.chartProd.TabIndex = 77;
             this.chartProd.Text = "chart1";
             // 
             // chartSum
             // 
-            chartArea6.Name = "ChartArea1";
-            this.chartSum.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.chartSum.Legends.Add(legend6);
+            chartArea2.Name = "ChartArea1";
+            this.chartSum.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartSum.Legends.Add(legend2);
             this.chartSum.Location = new System.Drawing.Point(384, 203);
             this.chartSum.Name = "chartSum";
-            series6.ChartArea = "ChartArea1";
-            series6.Legend = "Legend1";
-            series6.Name = "series0";
-            this.chartSum.Series.Add(series6);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "series0";
+            this.chartSum.Series.Add(series2);
             this.chartSum.Size = new System.Drawing.Size(633, 434);
             this.chartSum.TabIndex = 78;
             this.chartSum.Text = "chart1";
@@ -1314,6 +1315,61 @@
             this.pictureBox4.TabIndex = 85;
             this.pictureBox4.TabStop = false;
             // 
+            // LblMemOB
+            // 
+            this.LblMemOB.AutoSize = true;
+            this.LblMemOB.BackColor = System.Drawing.SystemColors.Window;
+            this.LblMemOB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.LblMemOB.ForeColor = System.Drawing.Color.Black;
+            this.LblMemOB.Location = new System.Drawing.Point(124, 598);
+            this.LblMemOB.Name = "LblMemOB";
+            this.LblMemOB.Size = new System.Drawing.Size(103, 20);
+            this.LblMemOB.TabIndex = 45;
+            this.LblMemOB.Text = "회원별 구매 내역";
+            this.LblMemOB.Visible = false;
+            this.LblMemOB.Click += new System.EventHandler(this.LblMemOB_Click);
+            // 
+            // picBoxCheck14
+            // 
+            this.picBoxCheck14.BackColor = System.Drawing.SystemColors.Window;
+            this.picBoxCheck14.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxCheck14.BackgroundImage")));
+            this.picBoxCheck14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picBoxCheck14.Location = new System.Drawing.Point(98, 595);
+            this.picBoxCheck14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.picBoxCheck14.Name = "picBoxCheck14";
+            this.picBoxCheck14.Size = new System.Drawing.Size(23, 25);
+            this.picBoxCheck14.TabIndex = 33;
+            this.picBoxCheck14.TabStop = false;
+            // 
+            // cbBoxMemOBName
+            // 
+            this.cbBoxMemOBName.FormattingEnabled = true;
+            this.cbBoxMemOBName.Location = new System.Drawing.Point(820, 171);
+            this.cbBoxMemOBName.Name = "cbBoxMemOBName";
+            this.cbBoxMemOBName.Size = new System.Drawing.Size(165, 23);
+            this.cbBoxMemOBName.TabIndex = 86;
+            // 
+            // LblMemOB1
+            // 
+            this.LblMemOB1.AutoSize = true;
+            this.LblMemOB1.BackColor = System.Drawing.Color.White;
+            this.LblMemOB1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.LblMemOB1.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.LblMemOB1.Location = new System.Drawing.Point(382, 164);
+            this.LblMemOB1.Name = "LblMemOB1";
+            this.LblMemOB1.Size = new System.Drawing.Size(208, 36);
+            this.LblMemOB1.TabIndex = 56;
+            this.LblMemOB1.Text = "회원별 구매 내역";
+            this.LblMemOB1.Visible = false;
+            // 
+            // cbBoxDate
+            // 
+            this.cbBoxDate.FormattingEnabled = true;
+            this.cbBoxDate.Location = new System.Drawing.Point(820, 171);
+            this.cbBoxDate.Name = "cbBoxDate";
+            this.cbBoxDate.Size = new System.Drawing.Size(165, 23);
+            this.cbBoxDate.TabIndex = 86;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -1321,6 +1377,8 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1104, 760);
+            this.Controls.Add(this.cbBoxDate);
+            this.Controls.Add(this.cbBoxMemOBName);
             this.Controls.Add(this.picBoxCheck10);
             this.Controls.Add(this.LblInbound);
             this.Controls.Add(this.LblPdInbound);
@@ -1363,6 +1421,7 @@
             this.Controls.Add(this.btnPdOrder);
             this.Controls.Add(this.btnMemDel);
             this.Controls.Add(this.LblAdmin);
+            this.Controls.Add(this.LblMemOB1);
             this.Controls.Add(this.LblProduct1);
             this.Controls.Add(this.Lblmember1);
             this.Controls.Add(this.LblProdChart1);
@@ -1382,6 +1441,7 @@
             this.Controls.Add(this.picBoxCheck7);
             this.Controls.Add(this.picBoxCheck8);
             this.Controls.Add(this.picBoxCheck6);
+            this.Controls.Add(this.picBoxCheck14);
             this.Controls.Add(this.picBoxCheck11);
             this.Controls.Add(this.picBoxCheck12);
             this.Controls.Add(this.picBoxCheck13);
@@ -1390,6 +1450,7 @@
             this.Controls.Add(this.LblPdDel);
             this.Controls.Add(this.LblPdRegi);
             this.Controls.Add(this.LblPriceMdfy);
+            this.Controls.Add(this.LblMemOB);
             this.Controls.Add(this.LblPdOutbound);
             this.Controls.Add(this.LblProdChart);
             this.Controls.Add(this.LblSaleChart);
@@ -1442,6 +1503,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartProd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartSum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxCheck14)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1540,6 +1602,11 @@
         internal System.Windows.Forms.Label LblMemManagement;
         internal System.Windows.Forms.Label LblProductManagement;
         internal System.Windows.Forms.PictureBox pictureBox4;
+        internal System.Windows.Forms.Label LblMemOB;
+        internal System.Windows.Forms.PictureBox picBoxCheck14;
+        private System.Windows.Forms.ComboBox cbBoxMemOBName;
+        internal System.Windows.Forms.Label LblMemOB1;
+        private System.Windows.Forms.ComboBox cbBoxDate;
     }
 }
 

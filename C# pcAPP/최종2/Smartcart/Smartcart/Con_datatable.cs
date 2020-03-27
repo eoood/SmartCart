@@ -10,7 +10,7 @@ namespace Smartcart
 {
     class Con_datatable
     {
-        public static string constring1 = "datasource=localhost; username=root; password=apmsetup; database=smartcart";
+        public static string constring1 = "datasource=localhost; username=root; password=apmsetup; database=smartcart; charset=utf8;";
         MySqlConnection conn = new MySqlConnection();
         private string sConnString = "";
         public void ConnectDB()
