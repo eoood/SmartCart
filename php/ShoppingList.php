@@ -1,17 +1,17 @@
 <?php
 
  $con = mysqli_connect("localhost", "root", "apmsetup", "smartcart");
- $result = mysqli_query($con,"SELECT * FROM `order` where buydate in ('".$_POST["date"]."')");
+ $barcode = $_POST["barcode"];
+ $result = mysqli_query($con, "SELECT * FROM product WHERE barcode = '$barcode';");
  $response = array();
 
  while($row = mysqli_fetch_array($result)){
-   
- array_push($response,array("product"=>$row[1],"price"=>$row[2],"buydate"=>$row[3]));
+	
+ array_push($response,array("name"=>$row[0],"price"=>$row[1]));
 
  }
  
  echo json_encode(array("response" =>$response));
-
  mysqli_close($con);
 
 ?>

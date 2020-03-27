@@ -1,6 +1,6 @@
 <?php 
     $con = mysqli_connect("localhost", "root", "apmsetup", "smartcart");
-    mysqli_query($con,'SET NAMES utf8');
+    mysqli_query($con,'SET userName utf8');
 
     $userID = $_POST["userID"];
     $userPassword = $_POST["userPassword"];
