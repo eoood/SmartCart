@@ -195,7 +195,7 @@ namespace Smartcart
                 {
                     string sName = myreaderPdmenu1.GetString("product");
                     ProdList.Add(sName);
-                    chartProd.Series.Add(sName);
+                    Series sin = chartProd.Series.Add(sName);
                 }
                 conPdmenuDB1.Close();
             }
@@ -1119,7 +1119,8 @@ namespace Smartcart
                 {
                     string sName = myreaderPdmenu1.GetString("product");
                     ProdList.Add(sName);
-                    chartProd.Series.Add(sName);
+                    Series sin = chartProd.Series.Add(sName);
+
                 }
                 conPdmenuDB1.Close();
             }
