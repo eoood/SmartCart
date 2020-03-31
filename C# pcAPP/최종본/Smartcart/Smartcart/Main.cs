@@ -396,7 +396,7 @@ namespace Smartcart
             DataTable dt = db.GetDBTable(sql);
             dataGridView2.DataSource = dt;
 
-            dataGridView2.Columns["name"].HeaderText = "아이디";
+            dataGridView2.Columns["name"].HeaderText = "상품명";
             dataGridView2.Columns["price"].HeaderText = "가격";
             dataGridView2.Columns["quantity"].HeaderText = "수량";
             dataGridView2.Columns["barcode"].HeaderText = "바코드 번호";
