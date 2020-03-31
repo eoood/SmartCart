@@ -17,23 +17,21 @@ import subprocess
 barcode_value = ""
 state = 0
 
+pd = ""
+pd_name = ""
+pd_price = ""
+total = 0
 
 host = '192.168.0.154' 
 port = 9999 
 #mac = ['dc:a6:32:7a:b6:13']
 #cartNum = '1';
-
-
-server_sock = socket.socket(socket.AF_INET)
-
-server_sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-
 #
-#mac = socket.gethostbyaddr(socket.gethostname())
 cartNum = socket.gethostname()
 #
 
-
+server_sock = socket.socket(socket.AF_INET)
+server_sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 server_sock.bind((host, port))
 server_sock.listen(1)
 
@@ -49,19 +47,37 @@ info = info.encode('utf-8')
 client_sock.send(info)
 
 def server():
-    data2 = client_sock.recv(1024)
-    print(data2.decode("utf-8"), len(data2))
-    
 
     while(True):
+        global pd
+        global pd_name
+        global pd_price
+        global state
+        
+        
         data= input("보낼 값 : ")
         data = data + "/" +cartNum + "+"
         data=data.encode('utf-8')
-        
         client_sock.send(data)
+        #
         
-    closesoket(client_sock)
-    closesoket(server_sock)
+        
+        data2 = client_sock.recv(1024)
+        data2 = data2.decode("utf-8")
+        print("받은 값 : "+data2)
+        print("----------------------------------")
+        pd = str(data2).split(' ')
+        pd_name = pd[0]
+        pd_price = pd[1]
+        print("\n")
+        
+        #state = 1
+        #while state == 1 :
+        #    time.sleep(1)
+        
+        
+    closesocket(client_sock)
+    closesocket(server_sock)
 
 def weight():
     EMULATE_HX711=False
@@ -102,7 +118,7 @@ def weight():
             
             val = hx.get_weight(5)
             global barcode_value
-            global state
+            #global state
             global state_name
             #global num
             #num=0
@@ -129,8 +145,8 @@ def weight():
                         #num =1
                 state = 1
                     
-                while state ==1:
-                    time.sleep(1)
+                #while state ==1:
+                #   time.sleep(1)
                     
             hx.power_down()
             hx.power_up()
@@ -212,7 +228,6 @@ def bar():
 
 def oled():
 
-
     # Raspberry Pi pin configuration:
     RST = None     # on the PiOLED this pin isnt used
     # Note the following are only used with SPI:
@@ -261,6 +276,11 @@ def oled():
     # font = ImageFont.truetype('Minecraftia.ttf', 8)
     
     global barcode_value
+    global pd
+    global pd_name
+    global pd_price
+    global total
+    
     barcode_value=""
     barcode_total=0
     barcode_price=0
@@ -272,7 +292,9 @@ def oled():
 
         # Write two lines of text.
         barcode_value=bar()
-          
+        time.sleep(4)
+    
+        """
         if barcode_value =='8801500102500':
             barcode_name = 'Banana'
             barcode_price =2500
@@ -296,24 +318,36 @@ def oled():
         if barcode_value =='3462000601200':
             barcode_name ='Shrimp Cracker'
             barcode_price =1200
-        
+        """
         
         barcode_total = int(barcode_total) + int(barcode_price)
         
-        print (barcode_total)
+        #print (barcode_total)
         
         barcode_price_text=str(barcode_price)
         barcode_total_text = str(barcode_total)
         
+        
+        
+        print("\nproduct name : "+pd_name)
+        print("product price : "+pd_price)
+        strTemp = str(pd_name).strip()
+        
+        total = int(total)+int(pd_price)
+        
         draw.text((x, top),       "CART :  1",  font=font, fill=255)
+        '''
         if barcode_value =="":
             draw.text((x, top+8),     "GOODS : ", font=font, fill=255)
         else :
-            draw.text((x, top+8),     "GOODS : "+barcode_name, font=font, fill=255)
-        draw.text((x, top+16),    "PRICE : "+barcode_price_text+' won',  font=font, fill=255)
-        draw.text((x, top+25),    "TOTAL : "+barcode_total_text+' won',  font=font, fill=255)
+            draw.text((x, top+8),     "GOODS : "+str(pd_name), font=font, fill=255)
+        '''
+        draw.text((x, top+8),     "GOODS : ", font=font, fill=255)
+        draw.text((x+48, top-8),   strTemp, font=font, fill=255)
+        draw.text((x, top+16),    "PRICE : "+str(pd_price)+' won',  font=font, fill=255)
+        draw.text((x, top+24),    "TOTAL : "+str(total)+' won',  font=font, fill=255)
   
-        global state
+        #global state
         # Display image.
         disp.image(image)
         disp.display()
@@ -321,37 +355,43 @@ def oled():
         
         #while state == 0 :
         #    time.sleep(1)
-        barcode_value=""
+        #barcode_value=""
         
-        #state=0
+        state=0
 
     
 while True:
-    
     try:
+        
         sesocket = threading.Thread(target=server)
-        sender = threading.Thread(target=bar)
-        receiver=threading.Thread(target=weight)
+        #sender = threading.Thread(target=bar)
+        #receiver=threading.Thread(target=weight)
         seoled = threading.Thread(target=oled)
         
         
         sesocket.start()
-        sender.start()
+        
         seoled.start()
-        receiver.start()
         
+        #seoled.start()
         
-        sender.join()
+        #sender.start()
+        #receiver.start()
+        #seoled.start()
+        
+        #sender.join()
+        
+        #receiver.join()
+        sesocket.join()
         seoled.join()
-        receiver.join()
-        #sesocket.join()
         
         time.sleep(0.1)
         
     except KeyboardInterrupt as e:
         
         print(e)
-        #conn.close()
+        closesocket(client_sock)
+        closesocket(server_sock)
         break
 
 
