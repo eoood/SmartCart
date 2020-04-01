@@ -66,7 +66,7 @@ def server():
         data2 = data2.decode("utf-8")
         print("받은 값 : "+data2)
         print("----------------------------------")
-        pd = str(data2).split(' ')
+        pd = str(data2).split('/')
         pd_name = pd[0]
         pd_price = pd[1]
         print("\n")
