@@ -313,7 +313,7 @@ public class ShoppingList extends AppCompatActivity {
                             db_value_pdInfo = result;
                             db_value_pdInfo1 = result1;
 
-                            sendInfo = user.getString("name") + " " + user.getString("price");
+                            sendInfo = user.getString("name") + "/" + user.getString("price");
 
                             SimpleDateFormat sdf = new SimpleDateFormat ( "yyyy-MM-dd");
                             Date time = new Date();
