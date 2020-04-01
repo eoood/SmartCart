@@ -49,6 +49,8 @@ public class ShoppingList extends AppCompatActivity {
     static String db_value_pdInfo;
     static String db_value_pdInfo1;
 
+    static String sendInfo;
+
     //id,상품명,가격,날짜 순으로 저장할 변수
     static ArrayList<String> orderList = new ArrayList<>();
 
@@ -311,6 +313,8 @@ public class ShoppingList extends AppCompatActivity {
                             db_value_pdInfo = result;
                             db_value_pdInfo1 = result1;
 
+                            sendInfo = user.getString("name") + " " + user.getString("price");
+
                             SimpleDateFormat sdf = new SimpleDateFormat ( "yyyy-MM-dd");
                             Date time = new Date();
                             String currentTime = sdf.format(time);
@@ -326,7 +330,7 @@ public class ShoppingList extends AppCompatActivity {
                         new Thread(){
                             public void run(){
                                 try {
-                                    dos.writeUTF(db_value_pdInfo);
+                                    dos.writeUTF(sendInfo);
                                 } catch (IOException e) {
                                     e.printStackTrace();
                                 }
